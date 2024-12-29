@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>声明(必读)</title>
+    <link href="/2024/12/29/%E5%A3%B0%E6%98%8E(%E5%BF%85%E8%AF%BB)/"/>
+    <url>/2024/12/29/%E5%A3%B0%E6%98%8E(%E5%BF%85%E8%AF%BB)/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr><font color ="orangered">**注意**：</font><font color ="orangered">这里是github托管的博客页面，并不是我的博客主页面，更新并不同步，且严重滞后，后续应该会该成hugo框架。</font><p><br></p><p>主页面为：<a href="everyoung.fun">everyoung.fun</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Test</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Notice</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>考研数学一笔记(格式测试中...)</title>
     <link href="/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/"/>
     <url>/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/</url>
@@ -110,11 +135,30 @@
   
   
   <entry>
-    <title>21世纪互联网记事</title>
-    <link href="/2024/10/29/21%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%B0%E4%BA%8B/"/>
-    <url>/2024/10/29/21%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%B0%E4%BA%8B/</url>
+    <title>Hello World</title>
+    <link href="/2024/10/29/hello-world/"/>
+    <url>/2024/10/29/hello-world/</url>
     
-    <content type="html"><![CDATA[<hr><p>事件名称：QQ9发布，旧版QQ出现停止运营迹象。</p><p>发生时间：不详</p><p>记录日期：2024-7-4</p><p>事件概述：</p><p>2024，基于electron的QQ9&#x2F;QQNT发布，同期，旧版本QQ（QQ9.7，QQNT为9.9）无法自定义背景图，报错“qq皮肤同步失败，建议你重新设置”，而官方丑图可以正常设置。而在新版QQ中，自定义背景需要开通SVIP。</p><img src="/img/post_img/21世纪互联网记事.assets/image-20240704212820573.png" alt="报错示例" style="zoom:80%;" align = "center"/><p>备注：</p><p>临时解决办法为，将<code>C:\Users\[UserName]\AppData\Roaming\Tencent\QQ\Skins</code>中的默认皮肤图片文件替换为自定义图片</p><hr>]]></content>
+    <content type="html"><![CDATA[<div align='center'><font size='7' color='MediumSlateBlue' style='font-family:Ubuntu mono'>Hello World, this is EveRYouNg!!!</font></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Test</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>21世纪互联网记事</title>
+    <link href="/2024/07/04/21%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%B0%E4%BA%8B/"/>
+    <url>/2024/07/04/21%E4%B8%96%E7%BA%AA%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%B0%E4%BA%8B/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><hr><p>事件名称：QQ9发布，旧版QQ出现停止运营迹象。</p><p>发生时间：不详</p><p>记录日期：2024-7-4</p><p>事件概述：</p><p>2024，基于electron的QQ9/QQNT发布，同期，旧版本QQ（QQ9.7，QQNT为9.9）无法自定义背景图，报错“qq皮肤同步失败，建议你重新设置”，而官方丑图可以正常设置。而在新版QQ中，自定义背景需要开通SVIP。</p><p><img src="/img/post_img/21世纪互联网记事.assets/image-20240704212820573.png" alt="报错示例" style="zoom:80%;" align = "center"/></p><p>备注：</p><p>临时解决办法为，将<code>C:\Users\[UserName]\AppData\Roaming\Tencent\QQ\Skins</code>中的默认皮肤图片文件替换为自定义图片</p><hr>]]></content>
     
     
     <categories>
@@ -131,25 +175,6 @@
       <tag>事件</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2024/10/29/hello-world/"/>
-    <url>/2024/10/29/hello-world/</url>
-    
-    <content type="html"><![CDATA[<div align='center'><font size='7' color='MediumSlateBlue' style='font-family:Ubuntu mono'>Hello World, this is EveRYouNg!!!</font></div>]]></content>
-    
-    
-    <categories>
-      
-      <category>Test</category>
-      
-    </categories>
-    
     
   </entry>
   
