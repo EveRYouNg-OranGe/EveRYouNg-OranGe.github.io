@@ -1,0 +1,34 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>/* @font-face{
+    font-family: 'VonwaonBitmap-16px';
+    src: url('/font/VonwaonBitmap-16px.woff2');   
+}
+
+@font-face{
+    font-family: 'ZiBangPlay_Cool_Style';
+    src: url('/font/ZiBangPlay_Cool_Style.woff2');   
+}
+*/
+@font-face{
+    font-family: 'LXGW WenKai Screen';
+    src: url('https://everyoung.fun/font/LXGWWenKaiGBScreen.woff2');   
+} 
+
+/* @font-face{
+    font-family: 'Jingnan_Wheat_Circle';
+    src: url('/fonts/Jingnan_Wheat_Circle.woff2') format("woff2");
+} */
+/* 
+html, body, .markdown-body {
+	font-family: -apple-system, 'PingFang SC', 'Jingnan_Wheat_Circle', 'ZCOOL KuaiLe',  'Microsoft Yahei', 'WenQuanYi Micro Hei';
+	font-size: 16px;
+} */
+
+/* html, body, .markdown-body {
+	font-family: -apple-system, 'PingFang SC', 'Jingnan_Bobo_Black-Bold', 'ZCOOL KuaiLe', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', serif;
+	font-size: 16px;
+} */
+
+html, body, .markdown-body, p {
+	font-family: 'LXGW WenKai Screen';;
+	font-size: 16px;
+}

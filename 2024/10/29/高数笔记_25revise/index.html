@@ -1,0 +1,1756 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_pc.png">
+  <link rel="icon" href="/img/icon_pc.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#A593E0">
+  <meta name="author" content="EveRYouNg">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="高数笔记   高数上极限及函数基础极限相关 $\lim [f(x)+g(x)] &#x3D; \lim f(x)+ \lim g(x)$需要两个极限都存在的时候才可以拆分；  拐点，渐近线拐点：二阶导为零或不存在且两侧二阶导异号的点。 渐近线 能画图就画图，不能画图再用公式，水平和铅直不谈，斜渐近线：  $\lim \frac{y}{x} &#x3D; a$ $\lim(y-ax)$  拉格朗日余项带拉格朗日余项的一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="考研数学一笔记(格式测试中...)">
+<meta property="og:url" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/index.html">
+<meta property="og:site_name" content="EveRYouNg">
+<meta property="og:description" content="高数笔记   高数上极限及函数基础极限相关 $\lim [f(x)+g(x)] &#x3D; \lim f(x)+ \lim g(x)$需要两个极限都存在的时候才可以拆分；  拐点，渐近线拐点：二阶导为零或不存在且两侧二阶导异号的点。 渐近线 能画图就画图，不能画图再用公式，水平和铅直不谈，斜渐近线：  $\lim \frac{y}{x} &#x3D; a$ $\lim(y-ax)$  拉格朗日余项带拉格朗日余项的一">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231204151644909.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231204151729443.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231007155414328-1696665262404-1.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231130163455222.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231117202553096.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/p182639234.jpg">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231010151759412-1696922290062-1.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231010170231741-1696928559441-3.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231212162848617.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231212162922081.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231118151840305.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231118151916446.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231118152025511.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231123155929564.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231109162644747.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231125202734599.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/geogebra-export-1699498390810-2.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231126164757077.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231126170751516.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231126171021172.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231127202739774.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231129192600209.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231129192959673.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231109212730663.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231123202640031.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231214182715723.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0.assets/image-20231212161406158.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0.assets/image-20231212161424348.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0.assets/image-20231212161447777.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0-1701179719285-2.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231212154012215.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0.assets/image-20231122113902349.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/2024/10/29/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0.assets/image-20231122113921359.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231027111946460-1698376793374-1.png">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231221141356755.png">
+<meta property="article:published_time" content="2024-10-29T06:14:02.964Z">
+<meta property="article:modified_time" content="2024-10-16T03:07:00.379Z">
+<meta property="article:author" content="EveRYouNg">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://everyoung-orange.github.io/img/post_img/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0_25revise.assets/image-20231204151644909.png">
+  
+  
+  
+  <title>考研数学一笔记(格式测试中...) - EveRYouNg</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/font.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"everyoung-orange.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>EveRYouNg</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/img_Byousoku.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="考研数学一笔记(格式测试中...)"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-10-29 14:14" pubdate>
+          2024年10月29日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">考研数学一笔记(格式测试中...)</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <div align='center'><font size='7' color='MediumPurple'>高数笔记</font></div>
+
+<hr>
+<h1 id="高数上"><a href="#高数上" class="headerlink" title="高数上"></a>高数上</h1><h2 id="极限及函数基础"><a href="#极限及函数基础" class="headerlink" title="极限及函数基础"></a>极限及函数基础</h2><h3 id="极限相关"><a href="#极限相关" class="headerlink" title="极限相关"></a>极限相关</h3><ol>
+<li>$\lim [f(x)+g(x)] = \lim f(x)+ \lim g(x)$需要两个极限都存在的时候才可以拆分；</li>
+</ol>
+<h3 id="拐点，渐近线"><a href="#拐点，渐近线" class="headerlink" title="拐点，渐近线"></a>拐点，渐近线</h3><p><strong>拐点</strong>：二阶导为<font color = "chartreuse">零或不存在</font>且两侧二阶导<font color = "chartreuse">异号</font>的点。</p>
+<p><strong>渐近线</strong></p>
+<p>能画图就画图，不能画图再用公式，水平和铅直不谈，斜渐近线：</p>
+<ol>
+<li>$\lim \frac{y}{x} = a$</li>
+<li>$\lim(y-ax)$</li>
+</ol>
+<h3 id="拉格朗日余项"><a href="#拉格朗日余项" class="headerlink" title="拉格朗日余项"></a>拉格朗日余项</h3><p>带拉格朗日余项的一阶泰勒展开式为：</p>
+<script type="math/tex; mode=display">
+f(x) = f(x_0) + f'(x_0)(x-x_0)+\frac{f''(\xi)}{2!}(x-x_0)^2 \quad\quad,\xi\ between \ x_0 \& \ x</script><p>一阶的余项为2阶导，2的阶乘，2次方；n阶即余项为n+1阶导，n+1的阶乘，n+1次方；</p>
+<h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><h3 id="积分公式记忆"><a href="#积分公式记忆" class="headerlink" title="积分公式记忆"></a>积分公式记忆</h3><p><img src="/img/post_img/高数笔记_25revise.assets/image-20231204151644909.png" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></p>
+<p>即同一行有：</p>
+<ol>
+<li>$\int (两项积)dx = 余项 +C$；</li>
+<li>$\int 单项dx = ln(余项和) +C$；</li>
+</ol>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231204151729443.png" srcset="/img/loading.gif" lazyload style="zoom:50%;" /></p>
+<p>而利用“正弦/切/割”三角代换可以将带根号的积分式转化为上一种情况；</p>
+<h3 id="变上限积分"><a href="#变上限积分" class="headerlink" title="变上限积分"></a>变上限积分</h3><p><strong>性质</strong></p>
+<ol>
+<li>$f(x)$可积，则变上限积分连续</li>
+<li>$f(x)$连续，则变上限积分可导</li>
+<li>奇偶性与$f(x)$原函数同（假设有原函数）</li>
+</ol>
+<p><strong>计算</strong></p>
+<ol>
+<li><p>简单模式：$\frac{d}{dx}\int_a^x f(t)dt = f(x)$</p>
+</li>
+<li><p>复杂模式：$\frac{d}{dx}\int_a^{\varphi(x)} f(t)dt = f[\varphi(x)]\varphi’(x)$，$\frac{d}{dx}\int_{\psi(x)}^{\varphi(x)} f(t)dt = f[\varphi(x)]\varphi’(x) - f[\psi(x)]\psi’(x)$；</p>
+<blockquote>
+<p>因为这是对导数的变限积分，不是对变限积分求导。变限积分下限在积分里是一个常数，求导之后是0不用考虑，你这里没有对变限积分求导，而是对一个导数进行了变限积分。</p>
+<p><a href="求变上限积分要不要减下限，不是无论下限是什么都是被积函数本身吗? - 小帅的回答 - 知乎
+https://www.zhihu.com/question/464212648/answer/2541593819">知乎</a></p>
+</blockquote>
+</li>
+<li><p>变态模式：</p>
+<ul>
+<li><p>可直接分离$x$和$t$，直接分离：</p>
+<script type="math/tex; mode=display">
+ \frac{d}{dx}\int_a^{\varphi(x)} e^{x+t}dt = \frac{d}{dx}[e^x\int_a^{\varphi(x)} e^tdt]= u'v+uv'</script></li>
+<li><p>不可直接分离，换元：</p>
+<script type="math/tex; mode=display">
+ \frac{d}{dx}\int_a^{\varphi(x)} e^{xt}dt = \frac{d}{dx}[\int_a^{x\varphi(x)} e^ud(\frac{u}{x})]= u'v+uv'</script></li>
+</ul>
+</li>
+</ol>
+<h3 id="积分中值定理"><a href="#积分中值定理" class="headerlink" title="积分中值定理"></a>积分中值定理</h3><ol>
+<li>$\int_a^b f(x)-g(x) = 0 \Rightarrow \exist\ \xi \in (a,b),\ f(\xi)-g(\xi) = 0$</li>
+</ol>
+<h3 id="反常积分审敛法"><a href="#反常积分审敛法" class="headerlink" title="反常积分审敛法"></a>反常积分审敛法</h3><p><strong>比较审敛法</strong></p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231007155414328-1696665262404-1.png" srcset="/img/loading.gif" lazyload style="zoom:35%;" /></p>
+<p>区分无穷限和无界，然后使用夹逼原理，比收敛函数小的函数还是收敛，比发散函数大的函数还是发散。</p>
+<p><strong>极限审敛法</strong></p>
+<p>极限审敛法1：在$\infty$处乘$x$，取极限若为0，说明原本是$p&gt;1$，收敛。（若$p\leq 1$会是常数或$\infty$）。</p>
+<p>极限审敛法2：在瑕点处乘$(x-a)$，取极限若为0，说明原本是$p&lt;1$，收敛。（若$p\geq 1$会是大于0的常数，即分子，或是$\infty$）。</p>
+<p>[<strong>注意</strong>] 这里乘x的一次项式是为了判别被积函数等价于多少阶（$n$为多少）的$\frac{1}{(x-a)^n}$，所以也<font color = "orangered">可以直接求被积函数的同阶无穷小</font>，看无穷小收不收敛。</p>
+<h3 id="旋转体表面积"><a href="#旋转体表面积" class="headerlink" title="旋转体表面积"></a>旋转体表面积</h3><p>应该是$\int2\pi y\sqrt{1+y’^2}dx$不是$\int2\pi ydx$；注意不要用错了。</p>
+<h3 id="物理量"><a href="#物理量" class="headerlink" title="物理量"></a>物理量</h3><p><strong>质心</strong></p>
+<script type="math/tex; mode=display">
+\bar{x} = \frac{\displaystyle\int_L x\rho(x,y,...)ds}{\displaystyle\int_L \rho(x,y,...)ds},\quad\quad \bar{y} = \frac{\displaystyle\int_L y\rho(x,y,...)ds}{\displaystyle\int_L \rho(x,y,...)ds} \quad\quad...</script><p><strong>形心</strong></p>
+<script type="math/tex; mode=display">
+\bar{x} = \frac{\displaystyle\int_L xds}{\displaystyle\int_L ds},\quad \bar{y} = \frac{\displaystyle\int_L yds}{\displaystyle\int_L ds} ,\quad ...</script><p><strong>转动惯量</strong></p>
+<script type="math/tex; mode=display">
+J = \int_M r^2 dm</script><p>$r$为旋转的质量微元（质量为$m$）离转轴的距离，物体（质量为$M$）的转动惯量就是$J$</p>
+<p><strong>曲率和曲率半径</strong></p>
+<script type="math/tex; mode=display">
+K =\left|\frac{d\alpha}{ds}\right| = \left|\frac{\displaystyle\frac{y''}{1+y'^2}}{\sqrt{1+y'^2}}\right|= \frac{|y''|}{(1+y'^2)^\frac{3}{2}}
+\\
+R = \frac{1}{K}</script><h3 id="区间再现-公式"><a href="#区间再现-公式" class="headerlink" title="[区间再现]公式"></a>[区间再现]公式</h3><script type="math/tex; mode=display">
+\int_a^b f(x)dx = \int_a^b f(a+b-x)dx</script><p>下限+上限-$x$；即对函数平移反折，使其与原函数图像半积分限对称；</p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231130163455222.png" srcset="/img/loading.gif" lazyload style="zoom:33%;" /></p>
+<p>在被积函数有关于中点对称时可用。</p>
+<h3 id="表格法-部分积分"><a href="#表格法-部分积分" class="headerlink" title="[表格法]部分积分"></a>[表格法]部分积分</h3><p>部分积分的一种规律，如对$\int P(x)Q(x)dx$；一列写微分，一列写积分：</p>
+<script type="math/tex; mode=display">
+\begin{array}{lcl}
+P(x) &\overset{\frac{d}{dx}}{\to}& P'(x) &\overset{\frac{d}{dx}}{\to}& P''(x) &\overset{\frac{d}{dx}}{\to}& P'''(x) &\to& ... \to 0\ (P^{n}(x))\\
+&\ddots& &\ddots& &\ddots&\\
+Q(x) &\overset{\int}{\to}& Q^{(-1)}(x) &\overset{\int}{\to}& Q^{(-2)}(x) &\overset{\int}{\to}& Q^{(-3)}(x) &\to& ... \to Q^{(-n)}(x)
+\end{array}</script><p>沿斜对角（虚线）乘积，交错相加：</p>
+<script type="math/tex; mode=display">
+\displaystyle\int P(x)Q(x)dx = \sum_{i=0}^n \left[(-1)^iP^{(i)}Q^{(-(i+1))}\right] +C</script><h3 id="点火公式-华莱士公式及相关"><a href="#点火公式-华莱士公式及相关" class="headerlink" title="[点火公式]华莱士公式及相关"></a>[点火公式]华莱士公式及相关</h3><script type="math/tex; mode=display">
+I_n = \int_0^{\frac{\pi}{2}} sin^nx  = \int_0^{\frac{\pi}{2}} cos^nx = \frac{n-1}{n}\cdot \frac{n-3}{n-2}...\\
+I_0 = \frac{\pi}{2},\quad I_1 = 1</script><h3 id="Gamma-函数-负指数积分"><a href="#Gamma-函数-负指数积分" class="headerlink" title="[$\Gamma$函数]负指数积分"></a>[$\Gamma$函数]负指数积分</h3><p>$\Gamma$函数性质如下：</p>
+<script type="math/tex; mode=display">
+\Gamma(n+1) = \int_0^{\infty} x^ne^{-x}dx = n\Gamma(n) = n!\\
+\Gamma(\frac{1}{2}) = \sqrt \pi</script><p>注意一个形似的反常积分（没有$x$次幂但指数有平方）：$\int_{-\infty}^{\infty} e^{-x^2}dx = 2\int_{0}^{\infty} e^{-x^2}dx = \sqrt \pi$，可以由$\Gamma(\frac{1}{2})$加换元得到。</p>
+<h1 id="高数下"><a href="#高数下" class="headerlink" title="高数下"></a>高数下</h1><h2 id="常见图线"><a href="#常见图线" class="headerlink" title="常见图线"></a>常见图线</h2><p><img src="/img/post_img/高数笔记_25revise.assets/image-20231117202553096.png" srcset="/img/loading.gif" lazyload  style="zoom: 67%;" /></p>
+<h2 id="可导、可积、可微及有原函数"><a href="#可导、可积、可微及有原函数" class="headerlink" title="可导、可积、可微及有原函数"></a>可导、可积、可微及有原函数</h2><p><strong>连续</strong>：一点左极限等于右极限等于该点函数值。</p>
+<p><strong>可导</strong>：左导数等于右导数存在且相等。</p>
+<p><strong>可微</strong>：该点可导且$dy = f’(x) dx$.</p>
+<blockquote>
+<p>以上三者关系：可导必连续，连续不一定可导。可导必可微，可微必可导。</p>
+</blockquote>
+<p><img src="/img/post_img/高数笔记_25revise.assets/p182639234.jpg" srcset="/img/loading.gif" lazyload style="zoom: 67%;" /></p>
+<p><strong>原函数存在</strong>：（对应不定积分）</p>
+<ul>
+<li>函数连续必有原函数</li>
+<li>函数含第一类间断点必没有原函数</li>
+<li><font color = "chartreuse">定义域内</font>含无穷间断点必没有原函数</li>
+</ul>
+<blockquote>
+<p>其他情况需要判定</p>
+</blockquote>
+<p><strong>可积</strong>：（对应定积分）</p>
+<ul>
+<li>函数连续则可积</li>
+<li>有界且有有限个间断点可积</li>
+</ul>
+<blockquote>
+<ol>
+<li>没规定第一类还是第二类</li>
+<li>可积则<font color = "lightgreen">变上限积分</font>存在</li>
+<li>$f(x)$的变上限积分在$f(x)$的一类间断点处不可导</li>
+</ol>
+</blockquote>
+<p>总结：</p>
+<ol>
+<li>先积出来，如果结果可导，则有原函数；</li>
+<li><font color = "Chartreuse">可积不等于原函数在，两者有交集但互不包含</font>，如可积不允许无界，原函数存在不允许一类间断。</li>
+<li>$F(x)= \int_a^x f(x)dx+F(a)$；</li>
+</ol>
+<h2 id="二元函数的连续，可-偏-导和可微"><a href="#二元函数的连续，可-偏-导和可微" class="headerlink" title="二元函数的连续，可(偏)导和可微"></a>二元函数的连续，可(偏)导和可微</h2><p><strong>连续</strong>：从任意方向逼近的极限值等于该点函数值。</p>
+<ul>
+<li>判别法：<ol>
+<li>举反例，存在两个方向趋近的值不一致；</li>
+<li>夹逼，将函数的范围求出，$(x,y)\to (x_0,y_0)$直接得到范围的极限，从而确定函数的极限。</li>
+</ol>
+</li>
+</ul>
+<p><strong>可(偏)导</strong>：$y_x’, y_y’$都存在。</p>
+<ul>
+<li><p>判别法：</p>
+<ol>
+<li>一般由定义用极限计算。<script type="math/tex; mode=display">
+ \lim_{\Delta x \to 0}\frac{f(x_0+\Delta x,y_0)-f(x_0, y_0)}{\Delta x}</script></li>
+</ol>
+</li>
+</ul>
+<p><strong>可微</strong>：该点连续且可(偏)导且$dz = f_x’ dx+f_y’dy$.</p>
+<ul>
+<li><p>判别法：</p>
+<ol>
+<li><script type="math/tex; mode=display">
+\lim_{\Delta x\to 0\ \atop \Delta y \to 0} \frac{f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)-[f_x'(x_0,y_0)\Delta x+f_y'(x_0,y_0)\Delta y]}{\rho = \sqrt{\Delta ^2x + \Delta^2 y}}\quad \overset{?}{=} 0</script></li>
+<li><font color = "OrangeRed">即$f(x_0+\Delta x, y_0+\Delta y)-f(x_0, y_0)=[f_x’\Delta x+f_y’\Delta y] +\omicron(\rho)$成立</font>。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>以上三者关系：</p>
+<p>可导不一定连续，连续不一定可导。连续不一定可微，可导不一定可微。可微必连续可导。偏导连续必可微。</p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231010151759412-1696922290062-1.png" srcset="/img/loading.gif" lazyload  style="zoom:25%;" align="left"/></p>
+</blockquote>
+<p><br></p>
+<h3 id="可导，可微的几何意义"><a href="#可导，可微的几何意义" class="headerlink" title="可导，可微的几何意义"></a>可导，可微的几何意义</h3><p><em>连续</em>：可以不光滑，但是要连续；<em>可导</em>：光滑($xy$方向光滑)；<em>可微</em>：超级光滑(所有方向光滑)。</p>
+<p>[所谓光滑，就是有切线，切平面；即可微是曲面某点存在切平面]</p>
+<p>在二元函数中，可导(偏导)表示x, y方向上可导，如下函数，$(0,0)$处可导，但是不可微，可微需要所有方向都可导。</p>
+<script type="math/tex; mode=display">
+f(x,y) = \begin{cases} 
+xy \quad &xy\neq 0,\\
+1\quad &xy=0,
+\end{cases}</script><p><img src="/img/post_img/高数笔记_25revise.assets/image-20231010170231741-1696928559441-3.png" srcset="/img/loading.gif" lazyload style="zoom:35%;" /></p>
+<h3 id="关于偏导数连续"><a href="#关于偏导数连续" class="headerlink" title="关于偏导数连续"></a>关于偏导数连续</h3><p>偏导数连续必可微，但是什么是偏导数连续？是这样:</p>
+<script type="math/tex; mode=display">
+\lim_{x\to 0}f_x'(x,y) = f_x'(x_0,y_0)\\
+\lim_{y\to 0}f_y'(x,y) = f_y'(x_0,y_0)</script><p>并不是，偏导数也是函数，需要从任何方向逼近都相等：</p>
+<script type="math/tex; mode=display">
+\lim_{(x,y)\to(x_0,y_0)}f_x'(x,y) = f_x'(x_0,y_0)\\
+\lim_{(x,y)\to(x_0,y_0)}f_y'(x,y) = f_y'(x_0,y_0)</script><h2 id="二元函数的点与线"><a href="#二元函数的点与线" class="headerlink" title="二元函数的点与线"></a>二元函数的点与线</h2><h3 id="极值点与驻点"><a href="#极值点与驻点" class="headerlink" title="极值点与驻点"></a>极值点与驻点</h3><p><strong>极值点</strong>：该点及邻域都有定义，且邻域的点都小于或大于该点。</p>
+<p><strong>驻点</strong>：一阶(偏)导等于0的点</p>
+<blockquote>
+<p>极值点不一定为驻点，驻点不一定为极值点</p>
+<p>需要$AC-B^2,\ A\ ?\ 0$判别</p>
+</blockquote>
+<h3 id="求多元函数最值问题"><a href="#求多元函数最值问题" class="headerlink" title="求多元函数最值问题"></a>求多元函数最值问题</h3><p><strong>条件极值</strong></p>
+<ol>
+<li><p><em>拉格朗日乘数法</em></p>
+<p> <del>函数梯度与约束条件梯度重合</del>：</p>
+<p> 求极值的函数（可能需要自己构造）和约束条件构成拉格朗日函数，对各个变量求偏导，得到所有可疑驻点然后比较：</p>
+<script type="math/tex; mode=display">
+ L = f+\lambda g+ \rho h \Rightarrow \begin{cases}
+ F_x' = 0\\
+ F_y' = 0\\
+ ...\\
+ F_{\varphi}' = 0\\
+ F_{\rho}' = 0\\
+ ...
+ \end{cases} \Rightarrow (x_0,y_0,z_0,...)</script> <font color = "orange">注意：</font>
+
+<ul>
+<li>一般$n$个变量的隐函数如果可以显式化，可以降一维进行计算，但是约束条件也要结合显式化的函数消去一维，变成新的约束条件，函数可以是隐函数，但是约束条件一定是方程而不是函数</li>
+</ul>
+</li>
+<li><p><em>化为一元函数最值问题</em></p>
+<p> 直接将边界方程代入函数，消元，化为一元函数最值问题。</p>
+</li>
+</ol>
+<p><strong>无条件极值</strong></p>
+<ol>
+<li><p>$f_x’ = 0;\ f_y’ = 0 \Rightarrow驻点$</p>
+</li>
+<li><p>$AC-B^2\big|_{(x_0,y_0)}\Rightarrow 是否为极点$？</p>
+<p> [若等于0，判别该点周围的点函数值是否都大于/小于该点的值（极值的定义）]</p>
+</li>
+<li><p>$A\overset{?}{&gt;}0 \Rightarrow 是什么极值点$？</p>
+</li>
+</ol>
+<h3 id="隐函数显式化"><a href="#隐函数显式化" class="headerlink" title="隐函数显式化"></a>隐函数显式化</h3><p>由二元函数可确定隐函数：$F(x,y) = 0$</p>
+<p>对$x,y$分别求导可以得到：</p>
+<script type="math/tex; mode=display">
+F_x'+F_y' \cdot\frac{dy}{dx} = 0\\
+F_x'\cdot\frac{dx}{dy} + F_y' = 0</script><p>于是得到了隐函数的导数。</p>
+<h3 id="空间向量相关"><a href="#空间向量相关" class="headerlink" title="空间向量相关"></a>空间向量相关</h3><h4 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h4><p><strong>三向量共面</strong> </p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+a_x & a_y & a_z\\
+b_x & b_y & b_z\\
+c_x & c_y & c_z\\
+\end{vmatrix} = 0 \Leftrightarrow coplanar\ vector</script><p><strong>梯度</strong></p>
+<script type="math/tex; mode=display">
+\nabla u(x_0,y_0,z_0...) = (\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial u}{\partial z}...)\big|_{(x_0,y_0,z_0...)}</script><p><strong>梯度与方向导数</strong></p>
+<p>梯度是方向导数最大的方向，方向导数：</p>
+<script type="math/tex; mode=display">
+\vec T =\nabla u(x_0,y_0,z_0...) \cdot (cos\theta, cos\beta, cos\gamma...)</script><p>$(cos\theta, cos\beta, cos\gamma…)$是方向余弦组成的单位方向向量。</p>
+<p><strong>梯度与法向量的关系</strong></p>
+<p>如果想求二维曲线$f(x, y)=0$在点$A = (x_0,y_0)$的法向量，可以先构造二元函数$z=f(x, y)$，然后求$z$在点$A$的梯度$\nabla z(A) = (\frac{\partial u}{\partial x},\frac{\partial u}{\partial y})\big|_{(x_0,y_0)}$，这个梯度向量就是曲线$f(x, y)=0$在点$A$的一个法向量。（该结论可推广至任意维度）</p>
+<script type="math/tex; mode=display">
+z = f(x,y) \Rightarrow u = f(x,y,z);\\ \nabla u\big|_{(x_0,y_0,z_0)} = \vec n\ of\ (x_0,y_0)\ in\ z=f(x,y)\\
+or \\
+z = f(x,y) \Rightarrow \vec n = (\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, -1)\quad or \quad (-\frac{\partial f}{\partial x}, -\frac{\partial f}{\partial y}, 1)</script><p><strong>空间曲线的切向量</strong></p>
+<script type="math/tex; mode=display">
+\begin{cases}
+A_1x+B_1y+C_1z+D_1 = 0 = F_1\\
+A_2x+B_2y+C_2z+D_2 = 0 = F_2
+\end{cases} \quad \overset{切向量}{\Longrightarrow} \quad \vec r = \begin{vmatrix}
+x & y & z\\
+F_{1x}' & F_{1y}' & F_{1z}'\\
+F_{2x}' & F_{2y}' & F_{2z}'\\
+\end{vmatrix}_{(x_0,y_0,z_0)}</script><p>即两个平面的法向量再叉乘；</p>
+<p><strong>散度与旋度</strong></p>
+<p>散度是$\nabla$算子点乘向量场，旋度是$\nabla$算子叉乘向量场（$\nabla$算子即偏微分算子）</p>
+<h3 id="二重积分与雅各比行列式"><a href="#二重积分与雅各比行列式" class="headerlink" title="二重积分与雅各比行列式"></a>二重积分与雅各比行列式</h3><p>雅各比行列式常用于二重积分换元：</p>
+<script type="math/tex; mode=display">
+\iint_D f(x,y)dxdy = \iint_{D'} g(u,v)|J|dudv\\
+J = \frac{\partial (x,y)}{\partial(u,v)}</script><p><a href="#高数上">返回顶端（￣︶￣）↗</a></p>
+<h2 id="线面积分及两大公式总结"><a href="#线面积分及两大公式总结" class="headerlink" title="线面积分及两大公式总结"></a>线面积分及两大公式总结</h2><p>重要思想：</p>
+<blockquote>
+<p>二元函数即三维曲面，二元方程是二维曲线</p>
+</blockquote>
+<h3 id="重积分计算法"><a href="#重积分计算法" class="headerlink" title="重积分计算法"></a>重积分计算法</h3><p><strong>直接计算</strong></p>
+<p>暂不谈；</p>
+<p><strong>对称性</strong></p>
+<ol>
+<li><p>区域关于面对称，看函数与轴关系</p>
+<p> <img src="/img/post_img/高数笔记_25revise.assets/image-20231212162848617.png" srcset="/img/loading.gif" lazyload alt="image-20231212162848617" style="zoom:40%;" /></p>
+</li>
+<li><p>区域与$(1,1,1)$对称，函数轮换对称$f(x,y,z) = f(y,z,x) = f(z,x,y)$；</p>
+<p> <img src="/img/post_img/高数笔记_25revise.assets/image-20231212162922081.png" srcset="/img/loading.gif" lazyload alt="image-20231212162922081" style="zoom: 40%;" /></p>
+</li>
+</ol>
+<h3 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h3><p>[<strong>图示</strong>]</p>
+<center class="third">
+    <img src="高数笔记_25revise.assets/image-20231118151840305.png" srcset="/img/loading.gif" lazyload alt="image-20231118151840305" style="zoom:23%;" />
+    <img src="高数笔记_25revise.assets/image-20231118151916446.png" srcset="/img/loading.gif" lazyload alt="image-20231118151916446" style="zoom:21%;" />
+    <img src="高数笔记_25revise.assets/image-20231118152025511.png" srcset="/img/loading.gif" lazyload alt="image-20231118152025511" style="zoom:19%;" />
+    <figcaption>[左]一类&emsp;[中]二类&emsp;[右]整体
+    </figcaption><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SV411k7Be/?spm_id_from=333.1073.top_right_bar_window_default_collection.content.click&vd_source=18f39aa0ffdd8a4a4781710fa4e1f58f" title="跳转至bilibili">图片来源</a>
+</center>
+
+
+<ul>
+<li>曲线积分可以看作求各部分质量不一致的曲线的质量；</li>
+<li>一类曲线积分有直接的关于各点质量的函数；</li>
+<li>二类曲线积分的“质量函数”被分为了各坐标分量；</li>
+</ul>
+<ol>
+<li><p>[<strong>第一类</strong>] 函数与弧的积分（方向与弧方向一致）</p>
+<script type="math/tex; mode=display">
+ \int_l f(x,y)ds = -\int_{-l} f(x,y)ds\\
+ ds = \sqrt{1+y'^2}\ dx = \sqrt{x'^2(t)+y'^2(t)}\ dt</script><p> 即将曲线积分转为普通积分，方式是转为$dx$或者用参数方程表示转为$dt$；</p>
+<p> [<em>注意</em>] 其中$ds \to dx$的过程是对积分区域函数的操作；</p>
+</li>
+<li><p>[<strong>第二类</strong>] 函数与弧的积分（方向与弧方向不一致，需要分解）（有向弧）</p>
+<script type="math/tex; mode=display">
+ \int_l P(x,y)dx+Q(x,y)dy = \int_a^b P(x,y)dx+Q(x,y)\cdot y' dx</script></li>
+<li><p>[<strong>格林公式</strong>] 二维N-L公式，将曲线积分转为曲面积分</p>
+<script type="math/tex; mode=display">
+ \oint_{\sum L_i} P(x,y)+Q(x,y)ds = \iint_D (\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})d\sigma</script> <font color = "orangered">*注意*：</font>
+
+<p> 格林公式使用条件：</p>
+<ul>
+<li><p>分段<font color= "orangered">光滑曲线</font>围成的<font color= "orangered">封闭</font>曲线；</p>
+</li>
+<li><p>$P，Q$在$D$上连续可偏导，如果有不连续可导的奇点，需要挖去奇点(在挖去的区域用格林公式)，<font color= "orangered">如果不知道是否在某处不可导，则不可用</font>；</p>
+</li>
+<li><p>区域在曲线方向左侧则该方向为曲线正向，$\sum L_i$为所有边界线。</p>
+<p>不同情况下的应用：</p>
+</li>
+<li><p>曲线封闭无奇点$\Rightarrow$格林公式；</p>
+</li>
+<li><p>曲线封闭有奇点$\Rightarrow$定义新路径挖掉奇点；</p>
+<ul>
+<li><p>求$P,Q$在$L$上积分和在$L_0$（挖孔）上积分的差，从而<font color= "chartreuse">将$L$的曲线积分转为$L_0$的曲线积分</font>，计算$L_0$的曲线积分值便可间接最出最后值。[一般若被积函数分母为一曲线，直接将挖孔曲线设为该曲线，如$ax^2+by^2 =\varepsilon^2$，届时分母为常数$\varepsilon^2$直接提出，之后再次使用格林公式或是直接计算就方便许多]</p>
+</li>
+<li><p>若有$\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}$，则直接等于新路径积分；</p>
+<p>  <img src="/img/post_img/高数笔记_25revise.assets/image-20231123155929564.png" srcset="/img/loading.gif" lazyload alt="image-20231123155929564" style="zoom:50%;" /></p>
+</li>
+</ul>
+</li>
+<li><p>曲线不封闭$\Rightarrow$</p>
+<ul>
+<li>若$\frac{\partial Q}{\partial x}\ne\frac{\partial P}{\partial y}$，加线，然后加上该线的反方向，加正加负抵消；</li>
+<li>若$\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}$，积分与路径无关，直接换路径；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h3><ol>
+<li><p>[<strong>第一类</strong>] 函数与曲面的积分（<del>函数与曲面垂直</del>计算函数方向相同的情况）</p>
+<script type="math/tex; mode=display">
+\int_\Sigma f(x,y,z)dS = \int_{D_{xy}} f(x,y,\varphi (x,y))\sqrt{1+\varphi'^2_x+\varphi'^2_y}d\sigma</script></li>
+<li><p>[<strong>第二类</strong>] 函数与曲面的积分（函数<del>与曲面不垂直，</del>映射到各坐标面计算）（有向曲面）</p>
+<script type="math/tex; mode=display">
+f(x,y,z) = p(x,y,z)\vec i +q(x,y,z) \vec j +r(x,y,z) \vec r\\
+\int_\Sigma Pdydz+Qdxdz+Rdxdy</script><p><img src="/img/post_img/高数笔记_25revise.assets/image-20231109162644747.png" srcset="/img/loading.gif" lazyload alt="image-20231109162644747" style="zoom: 50%;" /></p>
+<p>计算如下：</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+  \iint_\Sigma Pdydz+Qdxdz+Rdxdy = \iint_\Sigma \left[P\cdot cos\alpha+Q\cdot cos\beta+R\cdot cos\gamma \right]dS</script><p>  其中，$cos$为曲面的各点法线向量余弦，可由$F = f(x,y)-z$的梯度算出：</p>
+<script type="math/tex; mode=display">
+  cos\alpha = \frac{-z_x'}{\sqrt{1+z'^2_x+z'^2_y}},\quad cos\beta = \frac{-z_y'}{\sqrt{1+z'^2_x+z'^2_y}},\quad cos\gamma = \frac{1}{\sqrt{1+z'^2_x+z'^2_y}}</script><p>   技巧在于</p>
+<script type="math/tex; mode=display">
+  \begin{align}
+  &\iint_\Sigma \left[P\cdot \frac{cos\alpha}{cos\gamma}+Q\cdot \frac{cos\beta}{cos\gamma}+R \right]dxdy = \pm \iint_D f(x,y)dxdy\\
+  &cos\gamma \cdot dS = dxdy
+  \end{align}</script>  <font color = "orangered">*注意*：</font>
+
+<ol>
+<li>方向余弦是正是负取决于向量与对应坐标轴的夹角；一般来说，用梯度计算得到法向量之后看$z$轴的方向余弦正负，向下的法向量和$z$轴的夹角余弦就是负的；</li>
+<li>最后由$\Sigma$面到$D$面时需要根据选取的$\Sigma$的面来确定是正还是负，因为二维平面$D$只在上表面计算，如果$\Sigma$被映射到了$D$的反面，就需要加负号；</li>
+</ol>
+<ol>
+<li><p>[<strong>高斯公式</strong>] 三维N-L公式，将曲面积分转为三重积分</p>
+<script type="math/tex; mode=display">
+\ooint_{\sum\Sigma_i} Pdydz+Qdxdz+Rdxdy = \iiint_\Omega(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z})dv</script><font color = "orangered">*注意*：</font>
+
+<ul>
+<li><p>高斯公式要求$P，Q,R$在$\Omega$上连续可偏导，如果有奇点，需要挖去奇点，做法同上格林公式。<font color= "orangered">如果不知道是否在某处不可导，则不可用</font>，但如果可以确定在$\Sigma$上连续且连续偏导，可转用斯托克斯公式$\downarrow$。</p>
+</li>
+<li><p>曲面外侧为正向，内侧为负。$\sum\Sigma_i$为所有曲面的和，缺面可以加一面，再加上这面的反面；</p>
+</li>
+</ul>
+</li>
+<li><p>[<strong>斯托克斯公式</strong>] 解二类曲线/面积分</p>
+<script type="math/tex; mode=display">
+ \oint_L Pdx+Qdy+Rdz = \iint_\Sigma\begin{vmatrix}
+ dydz & dzdx & dxdy\\
+ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+ P & Q & R\\
+ \end{vmatrix}</script><p> 公式特点：</p>
+<script type="math/tex; mode=display">
+ \begin{vmatrix}
+ 缺x & 缺y & 缺z\\
+ 偏x & 偏y & 偏z\\
+ P不偏x & Q不偏y & R不偏z\\
+ \end{vmatrix}</script> <font color = "orangered">*注意*：</font>
+
+<p> 如果<font color= "chartreuse">不知道是否连续可偏导，可用第二形式转为一类曲面积分计算</font>，也即二类曲面积分计算法。</p>
+</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231125202734599.png" srcset="/img/loading.gif" lazyload alt="image-20231125202734599" style="zoom:40%;" align = "left"/></p>
+<p><strong>PS</strong>：曲线积分和曲面积分的斯托克斯公式联系是在3维进行联系的，格林公式是斯托克斯公式的二维形式；曲面积分到二重积分就是投影法；</p>
+</blockquote>
+<p><br></p>
+<h2 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h2><h3 id="常数项级数"><a href="#常数项级数" class="headerlink" title="常数项级数"></a>常数项级数</h3><p><strong>几何级数</strong></p>
+<p>就是等比数列构成的级数：$\sum_n aq^n$，特点是$q\geq 1$发散；</p>
+<p><strong>p级数</strong></p>
+<script type="math/tex; mode=display">
+\sum_n \frac{1}{n^p}</script><p>特点是$p \geq 1$发散</p>
+<p><strong>更一般的</strong></p>
+<ol>
+<li><p>常数项级数：</p>
+<ul>
+<li><p>计算$a_n \big|_{n \to \infty}$，若不为0必发散，否则下一步$\downarrow$</p>
+</li>
+<li><p>计算$S_n \big|_{n\to \infty}$，存在则收敛，否则发散</p>
+</li>
+</ul>
+</li>
+<li><p>正项级数（全为正的常数项级数）</p>
+<p> 特点：$S_n$单调增</p>
+<ul>
+<li><p>$S_n$有上界收敛（收敛于上界），否则发散</p>
+</li>
+<li><p>比较法（夹逼法）：可以p级数比较</p>
+</li>
+<li><p>极限法：第无穷项比值为常数的正项级数敛散性同</p>
+</li>
+<li><p>比值法：</p>
+<script type="math/tex; mode=display">
+  \lim_{n\to \infty}\frac{a_{n+1}}{a_n} = \rho \\
+  \begin{array}{lcl}
+  if\ \rho >1 \to 发散\\ elif\ \rho<1\to 收敛\\else\ not\ sure
+  \end{array}</script></li>
+<li><p>开方法：</p>
+<script type="math/tex; mode=display">
+  if\quad \lim_{n \to \infty} \sqrt[n]{a_n} \quad < 1 \to 收敛,\ else \to  发散</script></li>
+</ul>
+</li>
+<li><p>交错级数（一正一负交替）</p>
+<ul>
+<li><p>[<em>莱布尼兹判别法</em>] $|a_n|$单调减且$a_n\big|_{n\to \infty}=0$则级数收敛</p>
+<p><em>PS</em>：取绝对值增加发散性</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>PS</strong></p>
+<font color = "Chartreuse">为什么判敛散性都含$\lim_{n\to \infty}$？</font>
+
+<p>这里主要是回答比值法和开方法的理解问题，为什么由第n项就可判定敛散性？</p>
+<p>首先需要注意，<font color = "mediumPurple">正项级数数列没有0和$\infty$，且有限项数列必收敛，而当$n \to \infty$时，$a_n,a_{n+1}$必趋于0，否则就不收敛；</font></p>
+<p>于是将数列分为逐渐趋于0的后半部分和还不趋于0的前半部分，前半部分收敛于N项和（如果是N项的话），后半部分有无穷项，需要使用审敛法，比值法中和等比数列（几何级数）进行比较，即将后半部分趋于0的速度$\rho$与等比数列的公比$q$进行比较；</p>
+<p>根值法同理：</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}a_{n+1} = \rho \lim_{n\to \infty} a_n & \to & 等比，公比\rho\\
+\lim_{n \to \infty} {a_n} = l^n & \to & 等比，公比l</script><h3 id="幂级数"><a href="#幂级数" class="headerlink" title="幂级数"></a>幂级数</h3><p>幂级数：</p>
+<script type="math/tex; mode=display">
+\sum_{n=0}^{\infty} a_n x^n</script><p>其中，将$\sum_{n=0}^{\infty} a_n$看作一个常数项级数，$x^n$看一个收敛因子能够使$\sum_{n=0}^{\infty} a_n$收敛的所有$x$值组成收敛域；（类似Laplace变换）</p>
+<p>$x^n$为公比为$x$的等比数列，故比值法和根值法计算$a_n$的“公比”$\rho$，<font color ="chartreuse">$x\rho$为$\sum_{n=0}^{\infty} a_n x^n$的“公比”</font>，故可推导：</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \left| \frac{u_{n+1}(x)}{u_n(x)}\right| = \rho(x) <1 \Rightarrow ROC</script><p>于是得到收敛半径。可见<font color = "mediumPurple">推出级数的“公比”是得到收敛半径的根本，上述公式不是所有时候都使用。</font></p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/geogebra-export-1699498390810-2.png" srcset="/img/loading.gif" lazyload style="zoom: 17%;" /><br></p>
+<font color ="orangered"> **注意** </font>：
+1. $R = \frac{1}{\rho}$的公式来源于：如果标准的，不缺项的幂级数，$\lim$算出来应该是$|ax|$的形式，即$|ax|<1$，所以有$\frac{1}{\rho}$的形式，显然，$\rho(x)<1$使用范围要更广。
+2. $|x| = R$的时收不收敛需要讨论！！！
+
+**性质**：和函数逐项可积，逐项可导
+
+**幂级数展开**
+令$a_n = \frac{f^{(n)}(0)}{n!}$，则得到麦克劳林级数，$x-x_0$则得到泰勒级数；
+
+**常用幂级数展开记忆**
+
+| $f(x)$ | $\sum$ | $R$ | $F(n)$ |
+| - | - | - | - |
+| $sinx$ | $x-\frac{x^3}{6}+...$ <font color ="mediumpurple"> - $[n!]$ </font> | $\mathbb{R}$ | $\sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}$ |
+| $cos$ | $1-\frac{x^2}{2}+...$ <font color ="mediumpurple"> - $[n!]$ </font> | $\mathbb{R}$ | $\sum_{n=0}^{\infty} (-1)^{n}\frac{x^{2n}}{(2n)!}$ |
+| $e^x$ <font color ="mediumSpringgreen"> [类比$cosx+isinx$] </font> | $1+x+\frac{x^2}{2}+...$ <font color ="mediumpurple"> - $[n!]$ </font> | $\mathbb{R}$ | $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ |
+| $\frac{1}{1+x}$ | $1-x+x^2-...$ <font color ="mediumpurple"> - $[1]$ </font> | $(-1,1)$ | $\sum_{n=0}^{\infty} (-1)^nx^n$ |
+| $\frac{1}{1-x}$ | $1+x+x^2+...$ <font color ="mediumpurple"> - $[1]$ </font> | $(-1,1)$ | $\sum_{n=0}^{\infty} x^n$ |
+| $ln (x+1)$ | $x-\frac{x^2}{2}+\frac{x^3}{3}-...$ <font color ="mediumpurple"> - $[n]$ </font> | $(-1,1]$ | $\sum_{n=1}^{\infty} (-1)^{n-1}\frac{x^n}{n}$ |
+| $-ln (-x+1)$ | $x+\frac{x^2}{2}+\frac{x^3}{3}+...$ <font color ="mediumpurple"> - $[n]$ </font> | $[-1,1)$ | $\sum_{n=1}^{\infty} \frac{x^n}{n}$ |
+
+**特征**：
+1. 三角系分母为阶乘，反比函数系分母为1，对数系分母为$n$；
+2. $(1+x)$对应交错，$(1-x)$对应正项；
+3. 对数系为反比函数系的积分；$arctanx$为$\frac{1}{1+x^2}$，总之无阶乘配反比函数系性价比高；
+
+
+
+**Abel定理与幂级数绝对收敛问题**
+
+> Q：幂级数在收敛半径上收不收敛？绝对收敛？
+
+定理部分证明：
+<img src="/img/post_img/高数笔记_25revise.assets/image-20231126164757077.png" srcset="/img/loading.gif" lazyload alt="image-20231126164757077" style="zoom:67%;" />
+若$\left|\frac{x}{x_0}\right|=1$，即$|x| = R$，等比级数不收敛，由夹逼准则得$|a_nx^n|$不收敛；$|a_nx^n|$不收敛$\Leftrightarrow a_nx^n$不绝对收敛；即
+$$
+\begin{array}{lcl}
+|x| = R\ &\Rightarrow&\  a_nx^n不绝对收敛 \ \nRightarrow\ a_nx^n发散\\
+a_nx^n不绝对收敛\ &\Rightarrow&\ |x| \ge R
+\end{array}
+$$
+对[2020数一Q4]：
+<img src="/img/post_img/高数笔记_25revise.assets/image-20231126170751516.png" srcset="/img/loading.gif" lazyload alt="image-20231126170751516" style="zoom: 50%;" align = "left"/>
+<img src="/img/post_img/高数笔记_25revise.assets/image-20231126171021172.png" srcset="/img/loading.gif" lazyload alt="image-20231126171021172" style="zoom:50%;" />
+
+
+
+**幂级数和函数**
+
+和函数的性质：
+
+1. 逐项可导，逐项可积
+    求和函数常用到这两个性质对和函数进行处理。
+    如：
+    <img src="/img/post_img/高数笔记_25revise.assets/image-20231127202739774.png" srcset="/img/loading.gif" lazyload alt="image-20231127202739774" style="zoom: 40%;" />
+    PS：对于$x_0$邻域内的和函数$f(x)$，$a_n = \frac{f^{(n)}(x_0)}{n!}$；
+2. 部分和极限存在，幂级数收敛（于和函数），反之亦然；数列极限存在是级数收敛的条件；
+
+
+
+### 傅里叶级数
+不谈
+
+
+[返回顶端（￣︶￣）↗](#高数上)
+
+
+### 级数技法赏析
+
+> <img src="/img/post_img/高数笔记_25revise.assets/image-20231129192600209.png" srcset="/img/loading.gif" lazyload alt="image-20231129192600209" style="zoom:60%;" align = "left" />
+
+<img src="/img/post_img/高数笔记_25revise.assets/image-20231129192959673.png" srcset="/img/loading.gif" lazyload alt="image-20231129192959673" style="zoom:60%;" align = "left"/>
+
+<font color = chartreuse>思路</font>如图，包括单不限于：
+
+1. 首先确定大致方向，如对数系特征是$1/n$，无阶乘；反比例系是没有分母，没有阶乘；三角系是有阶乘；
+    并且“$-x$”类没有$(-1)^n$，“$+x$”类才有；和诸如此类规律。
+2. 常用和函数缺/赘项，如$S(x) = \sum_{n=0}^n \frac{x^{n+2}}{n!} = x^2e^x$；
+3. 微积分构成常用和函数的微分方程，如$S'(x)+S(x) = e^x$；
+其中主要<font color = chartreuse>处理技巧</font>有：
+
+[如果式子中没有抽象式，如$a_n,b_n,...$]
+
+1. 提取初项，提取完后累加从次项开始，再令$n = n+1$，可重新变回原格式，效果是
+    $$
+    \sum_{i=1}a_n\to \sum_{i=0}a_{n+1}
+    $$
+    即求和符$n$退一，式子中$n$进一；
+
+2. 逐项求导（逐项积分也很常用），效果是
+    $$
+    \sum x^n\to \sum nx^{n-1}
+    $$
+    通常积分和求导一起用，先求导再积分，或先积分再求导。
+
+3. 提取常数（$x$也可以）（$n$不可以！！！）
+    $$
+    \sum a^n\to a\sum a^{n-1}\quad ;\sum x^n\to x\sum x^{n-1}
+    $$
+
+4. 函数复合：$\sum_{n=0}^\infty x^{2n}$不止代表$\frac{1}{1-x}$的偶数项，也可以是$\frac{1}{1-x^2}$；
+
+[如果式子中有抽象式，如$a_n,b_n,...$]
+
+1. 利用题设条件搭配上述技巧进行处理，构造方程等等；
+
+
+
+### 注意点
+
+1. 收敛加发散得到的级数发散，发散加发散也是发散，但是<font color = orangered>发散减发散不一定</font>，且注意$\sum \frac{1}{n+a}$也是发散！！！
+
+
+
+# 线代
+
+> 空间中从来就不存在什么网格
+>
+> <p style="text-align:right">——题记</p>
+
+
+
+## 计算
+
+### 一些知识点
+
+1. 基础解系的向量个数为$列-r$
+2. 代数余子式$A_{ij}$直接计算行列式，余子式$M_{ij}$才考虑$\pm1$；
+3. 
+
+
+
+
+
+## 特征值
+
+### 一些要点
+
+1. 惯性指数：
+    - 正惯性指数：正的特征值个数
+    - 负惯性指数：同上。
+
+### 特征值与相似对角化的关系
+
+首先，需要知道的是，所谓相似对角化，就是对于一个线性变换，也许在这个线性变换中存在几个方向，在这几个方向的向量只是进行了伸缩变换（伸缩的系数就是$\lambda$，即特征值）而没有进行方向的变换，即
+$$
+Ax = \lambda x
+$$
+这就是特征向量，可以想见，<font color = chartreuse>特征向量之间肯定是线性无关的</font>，否则它们不就是同一个向量？所以对于一个n维的空间，不可能有超过n个这样的向量，即$N_\lambda \leq n$.
+
+这有什么用呢？这里我们需要想到，如果一个沿着基向量方向的线性变换，表达起来是不是很简单：
+$$
+\begin{bmatrix}
+\vec x&\vec y&\vec z
+\end{bmatrix}
+\begin{bmatrix}
+a&&\\
+&b&\\
+&&c
+\end{bmatrix} =  \begin{bmatrix}
+a\vec x&b\vec y&c\vec z
+\end{bmatrix}
+$$
+所以如果能用一个线性变换的<font color="chartreuse">特征向量作为基向量</font>（变换坐标系）重新表示这个线性变换，那么它将被表示为<font color="chartreuse">对角矩阵</font>！！！
+
+那么问题就来了：
+
+1. [**问题1**] 这个线性变换存不存在足够多的特征向量用来作为基向量？
+2. [**问题2**] 在以新的基向量构成的向量空间中怎么表示这个线性变换？
+
+如果问题1被解决，则可以进行<font color="chartreuse">相似对角化</font>；
+
+
+
+利用$Ax = \lambda x$，可以计算出$A$的特征向量，不过在计算上，先计算出$\lambda$更方便，再拿$\lambda$计算特征向量。由于不同的特征向量可能对应一样的特征值，所以可能有:
+
+1. $N_\lambda =n$，必有n个特征向量
+2. $N_\lambda <n$，看重复的$\lambda$解出的基础解系中有几个线性无关的向量
+
+总之就是要凑够$n$个特征向量才满足相似对角化的条件。到这里回答了问题1，问题2在[相似](##相似)中解决。
+
+
+
+[返回顶端（￣︶￣）↗](#高数上)
+
+## 相似
+
+首先摆出结论：<font color="chartreuse">相似的两矩阵，不过是同一个线性变换在两个坐标系中不同的矩阵表示！</font>
+
+<p>相关推理如图：</p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231109212730663.png" srcset="/img/loading.gif" lazyload alt="image-20231109212730663" style="zoom:50%;" /></p>
+<p>$\because$    其中，矩阵$P$即由坐标系$xOy$变换至目标坐标系的线性变换（矩阵）。</p>
+<p>$\therefore$    如果已知一个变换$A$，$A$的特征向量是$(\alpha_1,\alpha_2…\alpha_n) = P$，显然，由当前坐标矩阵（$E$矩阵）变换至特征向量矩阵（$P$矩阵）的矩阵就是$P$. </p>
+<p>$\therefore$    相似矩阵中会直接以求出来的特征向量组直接作为公式中的$P$矩阵</p>
+<p>经$P^{-1}AP$转换后得到$A$矩阵在新坐标系（$A$的特征向量为基向量的坐标系）中的表示，这样就得到了<a href="###特征值与相似对角化的关系">前面</a>提到的简单的表示方法。</p>
+<h3 id="补充-向量的投射"><a href="#补充-向量的投射" class="headerlink" title="[补充] 向量的投射"></a>[补充] 向量的投射</h3><p>本空间向量在变换空间的表示</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+\vec x&\vec y&\vec z
+\end{bmatrix}
+\begin{bmatrix}
+\ddots
+\end{bmatrix} =  \begin{bmatrix}
+\vec {x'}&\vec {y'}&\vec {z'}
+\end{bmatrix}</script><h3 id="对角化过程"><a href="#对角化过程" class="headerlink" title="对角化过程"></a>对角化过程</h3><p>对角化过程首先需要求得特征值和特征向量，如果满足相似对角化的条件，随后就是直接写出整个流程：$P^{-1}AP = \Lambda$；$\Lambda$是特征值对角矩阵，$P$是特征向量矩阵，$A$是原矩阵。</p>
+<p>唯一有一点不好的是，$P$的逆矩阵$P^{-1}$有点难求；</p>
+<p>但是如果$P$<font color = "chartreuse">正好是</font>正交矩阵（即满足$A^TA = E$的矩阵，列向量为<font color = "mediumpurple">两两正交</font>的<font color = "mediumpurple">单位向量</font>的矩阵），那求逆就可以直接转置了！$P^TAP =\Lambda$  （实际上，这是合同的条件）</p>
+<p>但这对$A$的特征向量要求很高，即它们两两正交；那用<font color = "orangered">施密特正交化</font>强行将$P$化转为正交阵如何呢？</p>
+<blockquote>
+<p>对一个矩阵：</p>
+<p><font color = "chartreuse">同一个特征值对应的特征向量</font>正交化后得到的向量仍然是特征向量；</p>
+<p>但<font color = "chartreuse">不同</font>特征值对应的特征向量正交化后得到的向量就不一定了</p>
+</blockquote>
+<p>强行转化的结果得到的矩阵可能不是对角阵或特征值对角阵；$P^{-1}AP = B\neq \Lambda$，主要矛盾在于除非矩阵的特征向量都对应同一个特征值，否则正交之后就会出问题。</p>
+<p>但是有这样一种矩阵，它<font color = "chartreuse">不同特征值对应特征向量天然正交</font>；（同时它必可相似对角化），它就是<font color = "orangered">实对称矩阵</font>；</p>
+<p>这意味着它的特征向量矩阵正交化之后还是特征向量矩阵，这说明施密特正交化与实对称矩阵才是绝配！</p>
+<script type="math/tex; mode=display">
+P^TAP =\Lambda\ (特征值对角阵)</script><p>问题解决！！！</p>
+<p><strong>总结</strong></p>
+<ol>
+<li><p>对角化条件很宽松，只需要有足够的特征向量就可以，代价是求$P^{-1}$麻烦；</p>
+<p> 正交对角化条件严格，要求矩阵实对称，但是好处是$P^{-1} = P^T$；</p>
+</li>
+<li><p>矩阵相似和合同本来是没啥关系的，相似不一定合同，合同不一定相似</p>
+<p> 但如果是实对称矩阵，则相似必合同；</p>
+<blockquote>
+<p>等价（只有秩相同）$\to$ 合同（秩和正负惯性指数相同）$\to$ 相似（秩，正负惯性指数，特征值均相同）；</p>
+<p>矩阵亲密关系的一步步深化。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="施密特正交化"><a href="#施密特正交化" class="headerlink" title="施密特正交化"></a>施密特正交化</h3><p><img src="/img/post_img/高数笔记_25revise.assets/image-20231123202640031.png" srcset="/img/loading.gif" lazyload alt="image-20231123202640031" style="zoom:40%;" /></p>
+<p>矩阵正交</p>
+<p><strong>注</strong>：选不同的特征向量作为$\beta_1$可能导致不同的正交阵；</p>
+<h3 id="相似性质"><a href="#相似性质" class="headerlink" title="相似性质"></a>相似性质</h3><ol>
+<li><p>特征值相同$\Rightarrow$迹相同，行列式相同$\Rightarrow$ <font color = "mediumpurple">$|A| = \lambda_1 \lambda_2… = |B|;\ tr(A) = tr(B) = \sum \lambda_i = 对角和$；</font></p>
+</li>
+<li><p>实对称矩阵必与特征值对角阵相似；（实对称矩阵的谱定理）</p>
+<p> 即实对称矩阵若与对角阵相似，则对角阵元素必为特征值。</p>
+</li>
+</ol>
+<h3 id="合同"><a href="#合同" class="headerlink" title="合同"></a>合同</h3><p>秩和正负惯性指数相同</p>
+<h2 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h2><p>二次型即不含常数的二次齐次函数，其对应矩阵为实对称矩阵</p>
+<script type="math/tex; mode=display">
+x^T A x\ =\ \begin{array}{}
+f(x_1, x_2...x_n) = a_{11}x_1^2+ a_{22}x_2^2+ a_{33}x_3^2+a_{nn}x_n^2\\
++a_{12}x_1x_2+a_{13}x_1x_3+... 
+\end{array} \quad \Rightarrow \quad
+\begin{bmatrix}
+a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{1n}\\
+\vdots&\vdots&\ddots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}
+\end{bmatrix} = A</script><p>如果说要把$f(x_1, x_2…x_n)$化为标准二次型，那么有上两节的理解，就需要将$A$表示的线性变换在一个新的坐标系进行表示即可</p>
+<h3 id="标准型与规范型"><a href="#标准型与规范型" class="headerlink" title="标准型与规范型"></a>标准型与规范型</h3><p>标准型：只有平方项；（不唯一）</p>
+<p>规范型：只有平方项且平方项系数只为$0$或$\pm 1$；（唯一）</p>
+<p>[注] 正交变换和配方法都可以获得标准型，<font color = "orange">正交变换获得的标准型矩阵是特征值矩阵，但是配方法得到的标准型矩阵不一定是（大概率不是）特征值矩阵</font>；配方法的变换是可逆变换，但不一定正交；</p>
+<p>即二次型$f = ax_1^2+bx_2^2+cx_3^2+dx_1x_2-ex_1x_3+fx_2x_3$既可以化为$f_1 = \alpha y^2$，也可以化为$f_2 = \beta_1 z_1^2 + \beta_2 z_2^2$，还可以化成……但是某个标准正交变换可以将它化为$f_0 = \lambda_1 x_1^2 + \lambda_2 x_2^2+\lambda_3 x_3^2$，$\lambda_i$为特征值。</p>
+<p>更本质的，配方法只是合同变换，只管惯性指数，不管具体特征值；</p>
+<h3 id="化二次型标准型方法"><a href="#化二次型标准型方法" class="headerlink" title="化二次型标准型方法"></a>化二次型标准型方法</h3><p><strong>正交变换法</strong></p>
+<p><strong>配方法</strong></p>
+<ol>
+<li><p>二次型含平方项，如$f = ax_1^2+bx_2^2+cx_3^2+dx_1x_2-ex_1x_3+fx_2x_3$；</p>
+<ul>
+<li>逐个击破（法一）<ul>
+<li>首先，$x_1$与$x_2，x_3$都有关联，所以有$(\sqrt a x_1+\frac{c}{2\sqrt a}x_2+\frac{e}{2\sqrt a}x_3)^2$项用以产生$dx_1x_2,ex_1x_3$及本身$ax_1^2$；</li>
+<li>同时减去$(\sqrt a x_1+\frac{c}{2\sqrt a}x_2+\frac{e}{2\sqrt a}x_3)^2$多余的项；</li>
+<li>同上方法处理所有变量。</li>
+</ul>
+</li>
+<li>逐个击破（法二）<ul>
+<li>汇总$x_1$项：$ax_1^2+dx_1x_2-ex_1x_3 = ax_1^2 +2\sqrt ax_1(\sim) = (\sim)^2-(\sim)^2$</li>
+<li>然后对$x_2,x_3$项处理。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不含平方项，如$f = x_1x_2+x_2x_3$；</p>
+<p> 猜想可逆变换</p>
+<ul>
+<li><p>首先取其中一项，作平方差：</p>
+<script type="math/tex; mode=display">
+  令\begin{cases}
+  x_1 = y_1+y_2\\
+  x_2 = y_1-y_2\\
+  x_3 = y_3(不变)
+  \end{cases}\Rightarrow
+  f = y_1^2-y_2^2+(y_1-y_2)y_3</script></li>
+<li><p>产生平方项之后复用含平方项的方法；</p>
+</li>
+<li><p>最后得到$x$与$z$（第二步中的变换）的关系即可。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="正定"><a href="#正定" class="headerlink" title="正定"></a>正定</h3><ol>
+<li>二次型恒正（$x\neq 0$）</li>
+<li>特征值全为正</li>
+<li>主子式全为正</li>
+<li>与$E$合同</li>
+</ol>
+<h1 id="概率论"><a href="#概率论" class="headerlink" title="概率论"></a>概率论</h1><h2 id="一些知识点"><a href="#一些知识点" class="headerlink" title="一些知识点"></a>一些知识点</h2><ol>
+<li><p>至少一个发生——$P(A\cup B\cup C)$</p>
+</li>
+<li><p>独立同分布随机变量的协方差：</p>
+<script type="math/tex; mode=display">
+X_1, X_2...X_n\sim iid \Rightarrow cov(X_i, X_j)= \begin{cases}
+0 \quad &,i\neq j\\
+\sigma^2\quad &,i= j
+\end{cases}</script><p>因为$i\neq j$时两两独立，故相关系数为0。</p>
+</li>
+<li><p>正态分布标准化：</p>
+<script type="math/tex; mode=display">
+\frac{X- \mu}{\sigma} \sim N(0,1)</script><font color ="orange">特别注意不是$\sigma^2$，是$\sigma$！！！</font>
+</li>
+<li><p>多维随机变量边缘分布是(标准)正态分布，则变量服从(标准)正态分布。</p>
+<p> 由正态分布概率密度直接得$\rho$：</p>
+<p> <img src="/img/post_img/高数笔记_25revise.assets/image-20231214182715723.png" srcset="/img/loading.gif" lazyload alt="image-20231214182715723" style="zoom: 50%;" align ="left"/></p>
+</li>
+<li><p>[<strong>易错点</strong>] $X_i \overset{iid}{\sim}N(0,1) \nRightarrow E\bar X^2 = 0$</p>
+</li>
+<li></li>
+</ol>
+<h3 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h3><center class="third">
+<img src="高数笔记.assets/image-20231212161406158.png" srcset="/img/loading.gif" lazyload alt="image-20231212161406158" style="zoom:40%;" />
+<img src="高数笔记.assets/image-20231212161424348.png" srcset="/img/loading.gif" lazyload alt="image-20231212161424348" style="zoom: 30%;" />
+<img src="高数笔记.assets/image-20231212161447777.png" srcset="/img/loading.gif" lazyload alt="image-20231212161447777" style="zoom:30%;" />
+</center>
+
+
+
+<h3 id="相关和独立"><a href="#相关和独立" class="headerlink" title="相关和独立"></a>相关和独立</h3><p>独立 $\Rightarrow$ 不相关；不相关 $\nRightarrow$ 独立</p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/相关系数-1701179719285-2.png" srcset="/img/loading.gif" lazyload alt="相关系数" /></p>
+<p>横轴：$X$；纵轴：$Y$；注意到线性相关的两个变量$Y = aX+b$相关系数为$\pm 1$（正相关则正，反之亦然）；</p>
+<blockquote>
+<p><em>特例</em></p>
+<p>$X,Y$服从二维正态分布，则不相关 $\nRightarrow$ 独立</p>
+</blockquote>
+<p>总结：相关系数更像是“线性相关系数”（线性相关系数是另一个东西）；</p>
+<h3 id="条件分布和边缘分布"><a href="#条件分布和边缘分布" class="headerlink" title="条件分布和边缘分布"></a>条件分布和边缘分布</h3><p><strong>条件分布</strong></p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231212154012215.png" srcset="/img/loading.gif" lazyload alt="image-20231212154012215" style="zoom: 33%;" /></p>
+<p>如：已知$X = x$的条件下，$Y\sim E(x)$，则可以得到：</p>
+<script type="math/tex; mode=display">
+f_{Y|X}(y|x) = xe^{-xy}</script><p>条件概率函数和联合概率密度函数的关系：</p>
+<script type="math/tex; mode=display">
+f(x,y) = f_X(x)\cdot f_{Y|X}(y|x)</script><p>类似条件概率公式$P(B|A) = \frac{P(AB)}{A}$；</p>
+<p>[<strong>注意</strong>] </p>
+<ol>
+<li><font color ="orangered">若$X,\ Y$独立，则$f(x,y) = f_X(x)\cdot f_Y(y)$；</font></li>
+<li>$\int_{-\infty}^{\infty} f(x,y_0)dx = F(\infty, y_0)\neq 1$，$\int_{-\infty}^{\infty} f_{X|Y}(x|y_0)dx = 1$；</li>
+</ol>
+<p><strong>边缘分布</strong></p>
+<p>已知$f(x,y) - F(x,y)$，则$Y$的边缘分布为：</p>
+<script type="math/tex; mode=display">
+F(y) = \int_{-\infty}^y \int_{-\infty}^{\infty} f(x,y)dxdy = F(\infty, y)\\
+f(x,y)=</script><h2 id="概率计算"><a href="#概率计算" class="headerlink" title="概率计算"></a>概率计算</h2><h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><ol>
+<li><p>$P\{X\leq x, X\leq y\} \overset{?}{=} P\{X\leq x\}P\{ X\leq y\}$，不对，需要分类讨论：</p>
+<script type="math/tex; mode=display">
+ P\{X\leq x, X\leq y\} = \begin{cases}
+ P\{X\leq y \},\quad x\geq y\\
+ P\{X\leq x \},\quad x< y\\
+ \end{cases}</script></li>
+<li></li>
+</ol>
+<h3 id="概率密度函数"><a href="#概率密度函数" class="headerlink" title="概率密度函数"></a>概率密度函数</h3><p>离散：概率分布/分布律 - 概率分布函数；</p>
+<p>连续：概率密度函数 - 概率分布函数</p>
+<p><em>概率密度函数不是概率！！！</em>即$f(x_i) = 0$，即$P(X = x_i) = 0$；只有$f(x_i)dx$是概率；</p>
+<p>所以已知$X$的概率密度，不能直接复合函数变量代换直接求$Y = \varphi(X)$的概率密度函数，需要先求$F(x) = P\{X\le x\}$，再求$P\{\varphi(X)\le y\} = P\{Y\le y\} = F(y)$.</p>
+<h3 id="卷积公式求概率密度函数"><a href="#卷积公式求概率密度函数" class="headerlink" title="卷积公式求概率密度函数"></a>卷积公式求概率密度函数</h3><blockquote>
+<p>已知$X, Y$联合概率密度$f_{XY}(x,y)$，求$Z = g(X,Y)$概率密度$f_Z(z)$；</p>
+</blockquote>
+<p><strong>原理</strong></p>
+<p>由$Z = g(X,Y)$可以得到$X = x(Z,Y)$或者$Y = h(X,Z)$；用这个替代掉$f_{XY}(x,y)$中的$x$或$y$，于是得到$XoZ$或者$YoZ$域的概率关系，相应地$XoY$域上的概率区域$D$将变为$XoZ$域上的概率区域$D’$；即</p>
+<script type="math/tex; mode=display">
+\begin{array}{}XoY\\D \end{array} \quad \xrightarrow{\begin{cases}Y = h(X,Z)\\X = X \end{cases}} \quad \begin{array}{}XoZ\\D' \end{array}</script><p>于是由<a href="####二重积分与雅各比行列式">二重积分的换元公式</a>，可以得到</p>
+<script type="math/tex; mode=display">
+\iint_D f(x,y) dxdy = \iint_{D'} f(x, h(x,z)) \left|\frac{\part(x,y)}{\part(x,z)}\right|dxdz</script><p>经计算换哪个变量，$J$就等于哪个变量对$z$求偏导：$\frac{\partial()}{\partial(z)}$；这样一来在新的域的联合概率密度就求出来了：</p>
+<script type="math/tex; mode=display">
+f_{XZ}(x,z) = f(x, h(x,z)) \left|\frac{\part y}{\part z}\right|</script><p>求$Z$的概率密度就是对其求边缘分布（对$x$积分）：</p>
+<script type="math/tex; mode=display">
+f_Z(z) = \iint_{-\infty}^{\infty} f(x, h(x,z)) \left|\frac{\part y}{\part z}\right| dx</script><h2 id="八大分布一览"><a href="#八大分布一览" class="headerlink" title="八大分布一览"></a>八大分布一览</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>分布</th>
+<th>描述</th>
+<th>$EX$</th>
+<th>$DX$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-1分布</td>
+<td>$\ P\{X=k\} = p^kq^{1-k},\quad k=0,1$</td>
+<td>$p$</td>
+<td>$pq$</td>
+</tr>
+<tr>
+<td>二项分布</td>
+<td>$X \sim B(n,p) :\ P\{X=k\} = C_n^k p^k(1-p)^{n-k}$</td>
+<td>$np$</td>
+<td>$npq$</td>
+</tr>
+<tr>
+<td>均匀分布</td>
+<td>$X \sim U(a, b):\  \varphi(x) = \begin{cases} \frac{1}{b-a}\\ 0 \end{cases}$</td>
+<td><font color =DarkOrange>$\frac{a+b}{2}$</font></td>
+<td><font color =DarkOrange>$\frac{(b-a)^2}{12}$</font></td>
+</tr>
+<tr>
+<td>几何分布</td>
+<td>$X \sim G(p):\  P\{X = k\} = p(1-p)^{k-1}$</td>
+<td>$\frac{1}{p}$</td>
+<td>$\frac{1}{p}(1-\frac{1}{p})$</td>
+</tr>
+<tr>
+<td>超几何分布</td>
+<td>$X \sim H(N, M, n):\ P\{X = k\} = \frac{C_M^k \cdot C_{N-M}^{n-k}}{C_N^n}$</td>
+<td>$n\frac{M}{N}$</td>
+<td>\</td>
+</tr>
+<tr>
+<td>指数分布</td>
+<td><font color =DarkOrange>$X \sim E(\lambda):\  f(x) =\begin{cases} \lambda e^{-\lambda x}\\ 0 \end{cases} k&gt;0$</font></td>
+<td><font color =DarkOrange>$\frac{1}{\lambda}$</font></td>
+<td><font color =DarkOrange>$\frac{1}{\lambda^2}$</font></td>
+</tr>
+<tr>
+<td>泊松分布</td>
+<td><font color =DarkOrange>$X\sim P(\lambda):\ P\{X = k\} = \frac{\lambda^k}{k!}e^{-\lambda},\quad k\geq 0,\ \lambda &gt;0 $</font></td>
+<td>$\lambda$</td>
+<td>$\lambda$</td>
+</tr>
+<tr>
+<td>正态分布</td>
+<td>$X \sim N(\mu, \sigma^2):\ f(x) = \frac{1}{\sqrt{2\pi}\sigma}exp\left\{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right\}$</td>
+<td>$\mu$</td>
+<td>$\sigma^2$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>[PS] </p>
+<ol>
+<li>n重伯努利实验中第n次实验事件才发生的概率；</li>
+<li>超几何分布即N个样本，M个正品，取n个，其中k个正品的概率；</li>
+<li>八大概率分布中只有均匀，指数，和正态分布是连续性b</li>
+</ol>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p><strong>列维-林德伯格中心极限定理</strong></p>
+<script type="math/tex; mode=display">
+X_i \overset{iid}{\sim}(EX, DX) \Rightarrow \sum_{i=1}^n X_i \sim N(nEX, nDX)</script><h2 id="参数估计与检验假设"><a href="#参数估计与检验假设" class="headerlink" title="参数估计与检验假设"></a>参数估计与检验假设</h2><h3 id="三大样本分布"><a href="#三大样本分布" class="headerlink" title="三大样本分布"></a>三大样本分布</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>$\chi^2$</th>
+<th>$t$</th>
+<th>$F$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\sum_{i=1}^n X_i^2 \sim \chi^2(n)$</td>
+<td>$\frac{X}{\sqrt{Y/n}} \sim t(n)$</td>
+<td>$\frac{X/m}{Y/n} \sim F(m,n)$</td>
+</tr>
+<tr>
+<td>$X_i \overset{iid}{\sim} N(0,1)$</td>
+<td>$X\sim N(0,1),\ Y\sim \chi^2(n),\ X\overset{i}{\sim}Y$</td>
+<td>$X\sim \chi^2(m),\ Y\sim \chi^2(n), X\overset{i}{\sim}Y$</td>
+</tr>
+<tr>
+<td>n个正态平方</td>
+<td>正态比卡方平均出来的正态</td>
+<td>卡方比卡方</td>
+</tr>
+<tr>
+<td>$E(\chi^2) = n\\ D(\chi^2) = 2n$</td>
+<td>$f(t) = f(-t)$</td>
+<td>$\frac{1}{F}\sim F(n,m)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><p>即以样本的统计量去估计总体的参数；</p>
+<h4 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h4><p><strong>期望和方差</strong></p>
+<left class="half">
+<img src="高数笔记.assets/image-20231122113902349.png" srcset="/img/loading.gif" lazyload alt="image-20231122113902349" style="zoom:50%;" />
+<img src="高数笔记.assets/image-20231122113921359.png" srcset="/img/loading.gif" lazyload alt="image-20231122113921359" style="zoom:50%;" />
+</left>
+
+
+<p><strong>常用统计量性质</strong></p>
+<p>$X_i\overset{iid}{\sim} N(\mu, \sigma^2)$；有如下性质</p>
+<ol>
+<li><p>关于样本均值</p>
+<script type="math/tex; mode=display">
+ \bar X \sim N(\mu, \frac{\sigma^2}{n})\quad; \frac{\bar X -\mu}{\sigma/\sqrt{n}} \sim N(0,1)\quad;\frac{\bar X -\mu}{S/\sqrt{n}} \sim t(n-1)</script></li>
+<li><p>关于样本方差：</p>
+<script type="math/tex; mode=display">
+ \frac{(n-1)S^2}{\sigma^2} =& \frac{\displaystyle\sum_{i=1}^n (X_i-\bar X)}{\sigma^2} &\sim& \chi(n-1)\\
+ &\frac{\displaystyle\sum_{i=1}^n (X_i-\mu)}{\sigma^2} &\sim& \chi(n)</script></li>
+<li><p>$\bar X$和$S^2$独立</p>
+</li>
+</ol>
+<p>$X_i\overset{iid}{\sim} N(\mu_1, \sigma_1^2)$；$Y_i\overset{iid}{\sim} N(\mu_2, \sigma_2^2)$；有如下性质</p>
+<ol>
+<li>$\bar X，\bar Y$分布<script type="math/tex; mode=display">
+ \bar X - \bar Y \sim N(\mu_1-\mu_2, \frac{\sigma_1^2}{m}+\frac{\sigma_2^2}{n})</script></li>
+</ol>
+<p>[<strong>注意</strong>] $S^2$是样本方差</p>
+<h4 id="点估计"><a href="#点估计" class="headerlink" title="点估计"></a>点估计</h4><ol>
+<li><p>矩估计</p>
+<ul>
+<li>由带参数的分布计算带参数的矩</li>
+<li>令<font color = "mediumpurple">带参数的理论矩</font>等于<font color = "chartreuse">样本矩</font></li>
+</ul>
+</li>
+<li><p>最大似然估计</p>
+<p> 将<font color = "mediumpurple">取当前样本值可能性最大的分布</font>作为估计分布：</p>
+<script type="math/tex; mode=display">
+ L = \prod_{i=1}^n f(x_i) = \prod_{i=1}^n P\{X_i = x_i\}</script><p> 求最大似然估计量时一般取对数再找极值，$ln L(x_1,x_2…;\theta)$和$L$同极值点。</p>
+<p> [<strong>注意</strong>] 最大似然函数是拿概率密度计算，不是分布函数，如果似然函数没有极点，注意是不是没有拿概率密度计算</p>
+</li>
+</ol>
+<h4 id="区间估计"><a href="#区间估计" class="headerlink" title="区间估计"></a>区间估计</h4><p>由统计量进行无偏估计，求统计量的分布，则由统计量的分布中距参数的距离（置信区间）可得置信度；</p>
+<p><img src="/img/post_img/高数笔记_25revise.assets/image-20231027111946460-1698376793374-1.png" srcset="/img/loading.gif" lazyload alt="image-20231027111946460" style="zoom:35%;" /></p>
+<h3 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h3><p>即对假设的检验</p>
+<ol>
+<li>[<strong>原假设</strong>] $H_0$：假设…是…</li>
+<li>[<strong>备择假设</strong>] $H_1$：假设…不是…</li>
+</ol>
+<p>拒绝域：样本出现在拒绝域$W$内，则拒绝$H_0$；—— 概率为$P(观测值\in W)$</p>
+<p>检验错误：</p>
+<ol>
+<li>去真：$H_0$为真时拒绝$H_0$</li>
+<li>存伪：$H_0$为假时不拒绝$H_0$</li>
+</ol>
+<p><a href="#高数上">返回顶端（￣︶￣）↗</a></p>
+<h1 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h1><h2 id="高数"><a href="#高数" class="headerlink" title="高数"></a>高数</h2><ol>
+<li><p>求一次导，无穷小量的阶数降低一阶；</p>
+</li>
+<li><p>混合积（三向量围成体积）为零，三向量共面</p>
+</li>
+<li><p>格林公式$Q-P$；</p>
+</li>
+<li><p>同名函数相减可用注意拉格朗日，而$ln$带分式常可变成同名函数差；</p>
+<p>可证常用不等式$\frac{x}{1+x} &lt; ln(1+x)&lt;x$；</p>
+</li>
+<li><p>$\lim(1+a)^b,\ a\sim 0,b\sim \infty;\ if\ ab = A, \lim(1+a)^b = e^A$；</p>
+</li>
+<li><p>对$\frac{x^n+x^{n-1}+…}{x^m+x^{m-1}+…}$，$x\to \infty$，分式极限抓大头（高阶），$x\to 0$，分式极限抓小头（低阶）；</p>
+<p>若$f(x),g(x)$为等价无穷小，则$x\to \infty$，两者展开式最高阶系数同，$x\to 0$，两者展开式最低阶同；</p>
+</li>
+<li><p>变上限积分积分限为$n$阶，被积函数$m$阶，则总体$n(m+1)$阶！！！</p>
+</li>
+<li><p>$f(x)= x,\ x\leq 0 \Rightarrow f’(0_-) = 1$；</p>
+</li>
+<li><p>$(x^a)’ = ax^{a-1},\ if\ a&gt;1\Rightarrow (x^a)’ = 0$；</p>
+</li>
+<li><p>隐函数到极限的联系是导数，将极限化为导数形式看看？</p>
+</li>
+<li><p>零点存在性问题可以用零点定理，也可以用罗尔定理！！！还可以用单调性。</p>
+<p>罗尔定理推论：区域内n阶导不为0至多有n个零点；</p>
+</li>
+<li><p>函数构造：</p>
+<script type="math/tex; mode=display">
+xf'(x)+nf(x) = 0 \leftrightarrow x^n f(x)\\
+f'(x)+\lambda f(x) = 0 \leftrightarrow e^{\lambda x}f(x)</script></li>
+<li><p>面积分中注意$x = rcos\theta$，不能漏掉$r$！！！！！</p>
+</li>
+<li></li>
+</ol>
+<h2 id="概率论与线代"><a href="#概率论与线代" class="headerlink" title="概率论与线代"></a>概率论与线代</h2><ol>
+<li><p>找到$x = Qy$化为了标准型就是找到了合同对角变换，如果$y$不是标准型，就只是合同变换</p>
+<p> 合同变换的方法是：</p>
+<ul>
+<li>$X$矩阵行列行列交替初等变换；</li>
+<li>记录所有列初等变换矩阵$P_1, P_2,…$，相乘得到合同变换$P = \prod P_i$（右乘，因为是顺序的列变换）</li>
+</ul>
+</li>
+<li><p>配方找合同变换时：如果项不全，可直接补上一项$z_3 = x_3$（这一项可逆即可，直接这样最简单）使变换可逆；</p>
+<p> <img src="/img/post_img/高数笔记_25revise.assets/image-20231221141356755.png" srcset="/img/loading.gif" lazyload alt="image-20231221141356755" style="zoom: 50%;" /></p>
+</li>
+<li></li>
+</ol>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\def</span><span class="hljs-keyword">\ooint</span>&#123;&#123;<span class="hljs-keyword">\bigcirc</span>&#125;<span class="hljs-keyword">\kern</span>-11.5pt&#123;<span class="hljs-keyword">\int</span>&#125;<span class="hljs-keyword">\kern</span>-6.5pt&#123;<span class="hljs-keyword">\int</span>&#125;&#125;<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/theory/" class="category-chain-item">theory</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/math/" class="print-no-link">#math</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>考研数学一笔记(格式测试中...)</div>
+      <div>https://everyoung-orange.github.io/2024/10/29/高数笔记_25revise/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>EveRYouNg</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年10月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/11/10/%E6%AD%8C%E5%8D%95%E4%B8%8E%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87/" title="音乐里的记忆片段">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">音乐里的记忆片段</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/10/08/%E7%90%86%E8%AE%BA%E8%AF%BE%E7%AC%94%E8%AE%B0%E6%B1%87%E6%80%BB/" title="理论课笔记汇总">
+                        <span class="hidden-mobile">理论课笔记汇总</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"IVnDm474uf1qcdQU22RrxsLF-gzGzoHsz","appKey":"Wk60jXZnCPtclxHMl2oTAvSr","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://ivndm474.lc-cn-n1-shared.com","emojiCDN":"https://valine-emoji.bili33.top/","emojiMaps":{"alu2":"alu/不出所料.png","alu3":"alu/不说话.png","alu4":"alu/不高兴.png","alu5":"alu/中刀.png","alu6":"alu/中指.png","alu7":"alu/中枪.png","alu8":"alu/亲亲.png","alu9":"alu/便便.png","alu10":"alu/内伤.png","alu11":"alu/击掌.png","alu12":"alu/口水.png","alu13":"alu/吐.png","alu14":"alu/吐舌.png","alu15":"alu/吐血倒地.png","alu16":"alu/呲牙.png","alu17":"alu/咽气.png","alu18":"alu/哭泣.png","alu19":"alu/喜极而泣.png","alu20":"alu/喷水.png","alu21":"alu/喷血.png","alu22":"alu/坐等.png","alu23":"alu/害羞.png","alu24":"alu/小眼睛.png","alu25":"alu/尴尬.png","alu26":"alu/得意.png","alu27":"alu/惊喜.png","alu28":"alu/想一想.png","alu29":"alu/愤怒.png","alu30":"alu/扇耳光.png","alu31":"alu/投降.png","alu32":"alu/抠鼻.png","alu33":"alu/抽烟.png","alu34":"alu/无奈.png","alu35":"alu/无所谓.png","alu36":"alu/无语.png","alu37":"alu/暗地观察.png","alu38":"alu/期待.png","alu39":"alu/欢呼.png","alu40":"alu/汗.png","alu41":"alu/深思.png","alu42":"alu/狂汗.png","alu43":"alu/献花.png","alu44":"alu/献黄瓜.png","alu45":"alu/皱眉.png","alu46":"alu/看不见.png","alu47":"alu/看热闹.png","alu48":"alu/瞅你.png","alu49":"alu/肿包.png","alu50":"alu/脸红.png","alu51":"alu/蜡烛.png","alu52":"alu/装大款.png","alu53":"alu/观察.png","alu54":"alu/赞一个.png","alu55":"alu/邪恶.png","alu56":"alu/锁眉.png","alu57":"alu/长草.png","alu58":"alu/阴暗.png","alu59":"alu/高兴.png","alu60":"alu/黑线.png","alu61":"alu/鼓掌.png","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg"},"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      <font color=#BC9AFC>赣ICP备2024022367号-1</font>
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>

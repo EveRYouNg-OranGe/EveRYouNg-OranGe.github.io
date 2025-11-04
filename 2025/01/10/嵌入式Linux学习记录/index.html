@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_pc.png">
+  <link rel="icon" href="/img/icon_pc.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#A593E0">
+  <meta name="author" content="EveRYouNg">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Linux学习笔记[主线 - 项目] [toc]  #0 当我们学习Linux时我们在学什么？当我们想要学习不明觉厉的Linux时，你可能会疑惑，我们到底在学什么？ 这是一个很重要的问题，我是学电子的，和每一个电子人一样从最基础的单片机，51单片机开始学起，当我们学完单片机时我们学的是一个学习电子，学习开发板的思路和方法。电路板是学不完的，但当我们拿到电路板，我们有一个基本的思路，即有没有原理图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式Linux学习笔记&#x2F;记录">
+<meta property="og:url" content="https://everyoung-orange.github.io/2025/01/10/%E5%B5%8C%E5%85%A5%E5%BC%8FLinux%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="EveRYouNg">
+<meta property="og:description" content="Linux学习笔记[主线 - 项目] [toc]  #0 当我们学习Linux时我们在学什么？当我们想要学习不明觉厉的Linux时，你可能会疑惑，我们到底在学什么？ 这是一个很重要的问题，我是学电子的，和每一个电子人一样从最基础的单片机，51单片机开始学起，当我们学完单片机时我们学的是一个学习电子，学习开发板的思路和方法。电路板是学不完的，但当我们拿到电路板，我们有一个基本的思路，即有没有原理图">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://everyoung-orange.github.io/img/index_img/milkv-duo.webp">
+<meta property="article:published_time" content="2025-01-09T20:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-08T11:47:13.522Z">
+<meta property="article:author" content="EveRYouNg">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Milkv Duo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://everyoung-orange.github.io/img/index_img/milkv-duo.webp">
+  
+  
+  
+  <title>嵌入式Linux学习笔记/记录 - EveRYouNg</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/font.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"everyoung-orange.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>EveRYouNg</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/img_Byousoku.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="嵌入式Linux学习笔记/记录"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-10 04:00" pubdate>
+          2025年1月10日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          27 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">嵌入式Linux学习笔记/记录</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><img src="/img/post_img/嵌入式Linux学习记录.assets/image-20250104182438469.png" srcset="/img/loading.gif" lazyload alt="" style="zoom:50%;" /></p>
+<h1 id="Linux学习笔记-主线-项目"><a href="#Linux学习笔记-主线-项目" class="headerlink" title="Linux学习笔记[主线 - 项目]"></a>Linux学习笔记[主线 - 项目]</h1><hr>
+<p>[toc]</p>
+<hr>
+<h2 id="0-当我们学习Linux时我们在学什么？"><a href="#0-当我们学习Linux时我们在学什么？" class="headerlink" title="#0 当我们学习Linux时我们在学什么？"></a>#0 当我们学习Linux时我们在学什么？</h2><p>当我们想要学习不明觉厉的Linux时，你可能会疑惑，我们到底在学什么？</p>
+<p>这是一个很重要的问题，我是学电子的，和每一个电子人一样从最基础的单片机，51单片机开始学起，当我们学完单片机时我们学的是一个学习电子，学习开发板的思路和方法。电路板是学不完的，但当我们拿到电路板，我们有一个基本的思路，即有没有原理图？拿什么软件/语言开发？有没有例程？点个灯？…</p>
+<p>因为MCU裸机开发是非常好理解的一件事，MCU就是一个小计算机，一个复杂的电路，你将代码编译为bin/hex，并将其烧录进MCU，然后电路就按程序一句一句运行了，很符合直觉是吧。</p>
+<p>但是如果项目复杂起来，你发现裸机开发开始变得很难受了，于是你决定往上爬技能树，上系统！但当我想要学习OS时，发现我不知道要从哪里开始。经过分析，我发现问题在于你不知道操作系统到底帮你解决了什么问题！裸机开发时，如果你找到了BSP或者库，你知道你可以偷懒了，可以直接调库而不是从0开始。那么操作系统的作用是什么呢？</p>
+<p>问题导向往往是学习技术最有效的方法，遗憾的是我很难找到一个具体而又简洁的教学内容。就像学会单片机之后你了解了当初你学的东西的作用，但那时候你已经把坑都踩过了。没有办法，我现在无法回答这个问题，我希望我学习结束之后能完成这部分内容。</p>
+<p>2025.1.4</p>
+<h2 id="1-从项目出发"><a href="#1-从项目出发" class="headerlink" title="#1 从项目出发"></a>#1 从项目出发</h2><p>自底向上学习往往是系统的，全面的，但是也是最难坚持的，如果是完全新手还好，但是如果是会一点，那就很痛苦，按顺序学起你会遇到很多很多学过的内容，因为教程往往要兼顾0基础的同学，但是这样也让有基础的同学非常痛苦，新旧知识混杂，教程看起来就会变得节奏拖沓，自然就算不得好教程了。所以我觉得如果有一定基础的话，直接从项目出发来学习是比较能够坚持下去的。先自顶向下，通过项目对整体有了个把握，然后再自底向上，这个过程遇见之前大概了解的内容，应是如遇故人，恍然大悟的感觉。</p>
+<p>所以我在这里设定一个项目，也是我一直想做的一个项目，即做一个Linux小相机。我列出了具体的需求：</p>
+<blockquote>
+<ol>
+<li><p>具有拍照和录像功能</p>
+</li>
+<li><p>能够存储照片和录像</p>
+</li>
+<li>能够与PC进行数据通信导出（和导入）照片</li>
+<li>[挑战1] 带驻极体话筒，录像可录音，带喇叭，可播放视频。</li>
+<li>[挑战2] 超长时间延时摄影（低功耗运行，可考虑加上太阳能）</li>
+<li>[挑战3] 手势控制拍照和录像（延时几秒后开始）</li>
+</ol>
+</blockquote>
+<p>有了需求之后就需要选型了，我决定使用我早前买的3块<a target="_blank" rel="noopener" href="https://milkv.io/docs/duo/getting-started/duo">Milkv Duo</a>开发板作为主控，主要因为是它设计之初就是针对视频监控相关领域设计的，并且这个版本不多不少的资源相当适合做我这种小项目，好像还带0.5T算力，非常适合后期进阶。先前冲动消费花100米入手了3块，现在正好拿来试试水。</p>
+<p>然后是屏幕，我选择使用一块2 inch大小240x320分辨率作为显示屏，不大不小，分辨率够。而摄像头是Milkv配套的CG2083。有显示屏和摄像头就可以完成基本功能了，收音和放音就再说吧。控制的话需要按键，按键用什么还在考虑，但是远离总归差不多，套一层抽象先用普通按键就可以了。电池的话打算用一个18650供电，方便易用。</p>
+<p>然后对于基本功能，当然是一步一步调通各个模块了，首先是亮屏，然后学会操作这块屏幕，做界面的话倾向于选择使用LVGL。学会操作屏幕之后学习摄像头，学习如何利用摄像头拍照和录像，并保存为文件。完成这两步之后应该对Linux，lvgl以及camera都有所了解了，可以开始设计程序架构和交互逻辑了。后面的功能就再说了，一步一步来。</p>
+<p>所以总结一下，当下的目标就是这三个：学习lvgl，学习camera，学习前两者的同时熟悉Linux，学会基础的Linux应用开发。</p>
+<p>开干！！！</p>
+<h2 id="2-Linux开发初探-第一周总结"><a href="#2-Linux开发初探-第一周总结" class="headerlink" title="#2 Linux开发初探 - 第一周总结"></a>#2 Linux开发初探 - 第一周总结</h2><p>第一周的工作有，熟悉Milkv的SDK，编译系统镜像，点屏幕，测试lvgl，其中主要是点屏幕。</p>
+<p><img src="/img/post_img/嵌入式Linux学习记录.assets/lvgl_test.jpg" srcset="/img/loading.gif" lazyload alt="lvgl_test" title="使用135x240小屏测试" style="zoom: 33%;" /></p>
+<h3 id="亮屏"><a href="#亮屏" class="headerlink" title="亮屏"></a>亮屏</h3><p>这一周最大的收获应该是修改设备树和fbtft的驱动然后编译系统镜像了，对设备树和驱动程序有一个初步的接触。主要参考的是以下几篇文章：</p>
+<p><a target="_blank" rel="noopener" href="https://community.milkv.io/t/spi-milk-v-duo-st7735/625">【spi】Milk-V Duo点亮st7735 - Duo - Milk-V Community</a></p>
+<p><a target="_blank" rel="noopener" href="https://community.milkv.io/t/milk-v-duo-spi-st7789/131">Milk-V Duo SPI驱动点亮屏幕(st7789) - Duo - Milk-V Community</a></p>
+<p>主要就是配置引脚功能，修改设备树文件，修改st7789v驱动文件（我的屏幕驱动芯片为st7789），然后在编译配置中添加相应的配置，然后就可以编译了。</p>
+<p>其中有几个点卡了比较久的时间，一个是开发板设备树中引脚名称和linux内核文件fbtft-core.c中引脚的联系？不一样的话是不行的。我想这部分涉及<a href="##设备树和设备驱动">设备树和设备驱动</a>的知识，但这里我交叉对比两个参考文章发现了这个问题。我觉得这部分应该还是要学的，因为后面还要添加按键控制。我打算搜集资料添加完按键之后再去学习这个知识点。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// cv1800b_milkv_duo_sd.dts</span><br>&amp;spi2 &#123;<br>     status = <span class="hljs-string">&quot;okay&quot;</span>;<br>     /delete-node/ spidev@<span class="hljs-number">0</span>;<br>     st7789v: st7789v@<span class="hljs-number">0</span>&#123;<br>         compatible = <span class="hljs-string">&quot;sitronix,st7789v&quot;</span>;<br>         ...<br>         dc = &lt;&amp;porta <span class="hljs-number">23</span> GPIO_ACTIVE_HIGH&gt;;  <span class="hljs-comment">//DC</span><br>         reset = &lt;&amp;porta <span class="hljs-number">15</span> GPIO_ACTIVE_HIGH&gt;; <span class="hljs-comment">//RES</span><br>         led = &lt;&amp;porta <span class="hljs-number">14</span> GPIO_ACTIVE_HIGH&gt;; <span class="hljs-comment">//BL</span><br>         debug = &lt;<span class="hljs-number">0x0</span>&gt;;<br>     &#125;;<br> &#125;;<br><br><span class="hljs-comment">// fbtft-core.c</span><br><span class="hljs-type">static</span> <span class="hljs-type">void</span> <span class="hljs-title function_">fbtft_reset</span><span class="hljs-params">(<span class="hljs-keyword">struct</span> fbtft_par *par)</span><br>&#123;<br>    ...<br>    gpiod_set_value_cansleep(par-&gt;gpio.reset, <span class="hljs-number">1</span>);<br>    msleep(<span class="hljs-number">10</span>);<br>    gpiod_set_value_cansleep(par-&gt;gpio.reset, <span class="hljs-number">0</span>);<br>    msleep(<span class="hljs-number">200</span>);<br>    gpiod_set_value_cansleep(par-&gt;gpio.reset, <span class="hljs-number">1</span>);<br>    msleep(<span class="hljs-number">10</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>还有一个卡住的地方是修改u-boot中引脚初始化文件时修改的文件不对导致编译出来的结果没有实现对应的功能，原因是SDK中存在两套代码：<code>cv1800b_milkv_duo_sd</code>和<code>cv1800b_sophpi_duo_sd</code>，看来应该是该其中任意一个，然后编译时选择对应的编译选项即可。不过一键编译脚本只有<code>cv1800b_milkv_duo_sd</code>的选项，所以我直接都改的这个文件夹里面的文件，这里又是一个小知识点，即<a href="##Milkv Duo SDK分步编译过程">分步编译时都编译了哪些文件呢</a>？</p>
+<p><img src="/img/post_img/嵌入式Linux学习记录.assets/image-20250110051537094.png" srcset="/img/loading.gif" lazyload alt="" style="zoom:100%;" /><img src="/img/post_img/嵌入式Linux学习记录.assets/image-20250110052043863.png" srcset="/img/loading.gif" lazyload alt="" style="zoom:50%;" /></p>
+<p>解决了这些问题然后就能够编译出可以点亮屏幕的镜像了，但是烧录镜像开机之后发现显示屏显示有偏移。经查找资料发现是1.14inch - 135x240的屏幕需要修改偏移量，这里参考了这篇文章：<a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/494446818490499152?spm_id_from=333.999.collection.opus.click">SPI LCD驱动移植（基于fbtft) - 哔哩哔哩</a>，但是其中一个偏移数值需要改大（＋1），评论区有提到。</p>
+<p>至此，就能通过操作<code>/dev/fb0</code>设备操作屏幕显示内容了。</p>
+<h3 id="lvgl测试"><a href="#lvgl测试" class="headerlink" title="lvgl测试"></a>lvgl测试</h3><p>本来是自己去clone <a target="_blank" rel="noopener" href="https://github.com/lvgl/lv_port_linux">lvgl/lv_port_linux</a>进行编译的，但是发现编译不通过，不知道是不是因为lvgl更新到了v9版本，很多原来的教程和新代码有出入了，行不通。本来是要卡在这里，但是发现milkv官方提供了lvgl例程，于是直接编译测试了。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/milkv-duo/lv_port_linux">milkv-duo/lv_port_linux: LVGL configured to work with a standard Linux framebuffer</a></p>
+<p>不过感觉学习的话还是得学习新版的V9版本啊。</p>
+<h2 id="3-LVGL与Linux按键设备学习"><a href="#3-LVGL与Linux按键设备学习" class="headerlink" title="#3 LVGL与Linux按键设备学习"></a>#3 LVGL与Linux按键设备学习</h2><p>学这部分之前先学了一些设备树的知识；</p>
+<p>对设备树有一定了解之后就不再继续深入了，不然跳进一个坑里就出不来了，接下来开始查找教程添加按键功能。</p>
+<h3 id="字符设备驱动"><a href="#字符设备驱动" class="headerlink" title="字符设备驱动"></a>字符设备驱动</h3><p>按键设备属于字符设备，所以需要了解字符设备驱动的编写；</p>
+<p>而字符设备驱动的编写主要就是要编写驱动对应的open，close，read等函数，因为Linux一切皆文件，所以设备也是以文件形式存在，通过编写设备的这些操作函数，实现对设备的控制。而这部分主要是编写file_operations结构体中的成员变量的实现。</p>
+<p>Linux驱动程序可以编译到kernel里面（.img），也可以编译为模块（.ko）。测试的时候只需要加载.ko模块就可以。</p>
+<p>看了一部分资料发现</p>
+<h1 id="Linux开发学习-支线-技能点"><a href="#Linux开发学习-支线-技能点" class="headerlink" title="Linux开发学习[支线 - 技能点]"></a>Linux开发学习[支线 - 技能点]</h1><p>这里是主线任务中的一些可跳过或者不可跳过的知识点集合。</p>
+<h2 id="设备树和设备驱动"><a href="#设备树和设备驱动" class="headerlink" title="设备树和设备驱动"></a>设备树和设备驱动</h2><p>关于设备树相关的知识这里决定参考立创出的泰山派的教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ax4y1C7x3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=18f39aa0ffdd8a4a4781710fa4e1f58f">【新手必学Linux设备树】立创·泰山派RK3566 Linux开发板训练营第三课_哔哩哔哩_bilibili</a></p>
+<p>我看了下，发现还是比较易懂的。一些比较令人疑惑的问题会一边学习一边记录下来。</p>
+<blockquote>
+<p>问题一：设备树的作用是什么？设备树为什么要相互引用？</p>
+<p><strong>设备树就是用于描述硬件信息的一个配件文件</strong>，因为他描述的时候的拓扑结构很像树，所以就叫做设备树。由节点（Node）和属性（Property）组成。每个节点描述一个硬件设备或资源，节点通过父子关系和兄弟关系进行连接。每个设备节点以一个路径标识符（例如/cpu@0）和多个属性（键值对）组成。<strong>设备节点可以包含子节点，形成嵌套的层次结构。</strong>属性描述了设备的特性，例如设备的名称、类型、寄存器地址、中断信息等。设备节点的路径和属性组合在一起提供了设备树的完整描述，以描绘硬件系统中各个设备的层次结构和配置信息。</p>
+<p><img src="嵌入式Linux学习记录.assets/output.png" srcset="/img/loading.gif" lazyload alt="output" style="zoom: 40%;"/></p>
+</blockquote>
+<p>用我自己的话来说，设备树就是类似于json的一种配置文件，语法像是C语言和json揉在一起，有源文件dts，头文件dtsi，还可以用C语言语法引用.h头文件，需要编译器dtc编译成dtb。内核通过一些代码解析设备树，通过设备树中的对应关系匹配设备对应的驱动程序。</p>
+<p>我觉得只要搞懂设备树是个什么东西就差不多了，设备树语法不多说了，应该比较容易查到。</p>
+<h2 id="Milkv-Duo-SDK分步编译过程"><a href="#Milkv-Duo-SDK分步编译过程" class="headerlink" title="Milkv Duo SDK分步编译过程"></a>Milkv Duo SDK分步编译过程</h2><p>milkv点屏幕的时候按照教程改了一边设备树，但是当时还不知道是怎么回事，就单纯一步一步照抄。现在来分析一下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs c">/dts-v1/;<br><span class="hljs-comment">/* 引用一些头文件 */</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;cv180x_base_riscv.dtsi&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;cv180x_asic_qfn.dtsi&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;cv180x_asic_sd.dtsi&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;cv180x_default_memmap.dtsi&quot;</span></span><br><br><span class="hljs-comment">/* mipi接口接收设备，大概是摄像头用的 */</span><br>&amp;mipi_rx&#123;<br>    snsr-reset = &lt;&amp;portc <span class="hljs-number">8</span> GPIO_ACTIVE_LOW&gt;, &lt;&amp;portc <span class="hljs-number">8</span> GPIO_ACTIVE_LOW&gt;, &lt;&amp;portc <span class="hljs-number">8</span> GPIO_ACTIVE_LOW&gt;;<br>&#125;;<br><br><span class="hljs-comment">/* 我们添加的spi2设备 */</span><br>&amp;spi2 &#123;<br>    status = <span class="hljs-string">&quot;okay&quot;</span>; <span class="hljs-comment">// 打开spi2</span><br>    /delete-node/ spidev@<span class="hljs-number">0</span>;	<span class="hljs-comment">// 删除地址为0的设备节点</span><br>    st7789v: st7789v@<span class="hljs-number">0</span>&#123;	<span class="hljs-comment">// 添加st7789v节点</span><br>        <span class="hljs-comment">/* 匹配驱动和配置一些参数 */</span><br>        compatible = <span class="hljs-string">&quot;sitronix,st7789v&quot;</span>;<br>        reg = &lt;<span class="hljs-number">0</span>&gt;;<br>        status = <span class="hljs-string">&quot;okay&quot;</span>;<br>        spi-max-frequency = &lt;<span class="hljs-number">48000000</span>&gt;;<br>        spi-cpol;<br>        spi-cpha;<br>        rotate = &lt;<span class="hljs-number">270</span>&gt;; <span class="hljs-comment">//旋转，我不转就竖屏</span><br>        fps = &lt;<span class="hljs-number">60</span>&gt;;<br>        rgb;<br>        buswidth = &lt;<span class="hljs-number">8</span>&gt;;<br><br>        dc = &lt;&amp;porta <span class="hljs-number">23</span> GPIO_ACTIVE_HIGH&gt;;	<span class="hljs-comment">//DC</span><br>        reset = &lt;&amp;porta <span class="hljs-number">15</span> GPIO_ACTIVE_HIGH&gt;; <span class="hljs-comment">//RES</span><br>        led = &lt;&amp;porta <span class="hljs-number">14</span> GPIO_ACTIVE_HIGH&gt;; <span class="hljs-comment">//BL</span><br><br>        debug = &lt;<span class="hljs-number">0x0</span>&gt;;<br>    &#125;;<br>&#125;;<br><br>&amp;uart1 &#123;<br>    status = <span class="hljs-string">&quot;okay&quot;</span>;<br>&#125;;<br>......<br><br>&amp;i2c1 &#123;<br>       status = <span class="hljs-string">&quot;okay&quot;</span>;<br>       clock-frequency = &lt;<span class="hljs-number">100000</span>&gt;;<br>&#125;;<br><br><span class="hljs-comment">/* 根节点 */</span><br>/ &#123;<br>    model = <span class="hljs-string">&quot;Milk-V Duo&quot;</span>;<br>&#125;;<br><br></code></pre></td></tr></table></figure>
+<p>——————————————-[<font color="red">NOTICE</font>]——————————————-</p>
+<p>2025/6/8：由于工作原因，这个项目暂缓，择日重启……同时暂时开拓新支线任务</p>
+<p>———————————————-[<font color="red">END</font>]———————————————-</p>
+<h1 id="一些小知识"><a href="#一些小知识" class="headerlink" title="一些小知识"></a>一些小知识</h1><h2 id="milkv-运行可执行文件报错：-sh-main-not-found"><a href="#milkv-运行可执行文件报错：-sh-main-not-found" class="headerlink" title="　milkv 运行可执行文件报错：-sh: ./main: not found"></a>　milkv 运行可执行文件报错：-sh: ./main: not found</h2><p>错误由于缺少了一个动态链接库。在 milk-v duo 开发板上运行如下命令即可正常运行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /lib/ld-musl-riscv64v0p7_xthead.so.1 /lib/ld-musl-riscv64xthead.so.1<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Linux-Pi/" class="category-chain-item">Linux Pi</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/Milkv-Duo/" class="print-no-link">#Milkv Duo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>嵌入式Linux学习笔记/记录</div>
+      <div>https://everyoung-orange.github.io/2025/01/10/嵌入式Linux学习记录/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>EveRYouNg</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/01/20/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BD%91%E7%AB%99%E8%A2%AB%E9%BB%91%E5%AE%9E%E5%BD%95/" title="第一次遭遇网络攻击实录 - Nginx配置被恶意篡改？">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">第一次遭遇网络攻击实录 - Nginx配置被恶意篡改？</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/01/2025%E4%B8%8A%E5%8D%8A%E5%B9%B4%E9%98%B6%E6%AE%B5%E6%80%A7%E7%9B%AE%E6%A0%87/" title="2025上半年阶段性目标">
+                        <span class="hidden-mobile">2025上半年阶段性目标</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"IVnDm474uf1qcdQU22RrxsLF-gzGzoHsz","appKey":"Wk60jXZnCPtclxHMl2oTAvSr","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://ivndm474.lc-cn-n1-shared.com","emojiCDN":"https://valine-emoji.bili33.top/","emojiMaps":{"alu2":"alu/不出所料.png","alu3":"alu/不说话.png","alu4":"alu/不高兴.png","alu5":"alu/中刀.png","alu6":"alu/中指.png","alu7":"alu/中枪.png","alu8":"alu/亲亲.png","alu9":"alu/便便.png","alu10":"alu/内伤.png","alu11":"alu/击掌.png","alu12":"alu/口水.png","alu13":"alu/吐.png","alu14":"alu/吐舌.png","alu15":"alu/吐血倒地.png","alu16":"alu/呲牙.png","alu17":"alu/咽气.png","alu18":"alu/哭泣.png","alu19":"alu/喜极而泣.png","alu20":"alu/喷水.png","alu21":"alu/喷血.png","alu22":"alu/坐等.png","alu23":"alu/害羞.png","alu24":"alu/小眼睛.png","alu25":"alu/尴尬.png","alu26":"alu/得意.png","alu27":"alu/惊喜.png","alu28":"alu/想一想.png","alu29":"alu/愤怒.png","alu30":"alu/扇耳光.png","alu31":"alu/投降.png","alu32":"alu/抠鼻.png","alu33":"alu/抽烟.png","alu34":"alu/无奈.png","alu35":"alu/无所谓.png","alu36":"alu/无语.png","alu37":"alu/暗地观察.png","alu38":"alu/期待.png","alu39":"alu/欢呼.png","alu40":"alu/汗.png","alu41":"alu/深思.png","alu42":"alu/狂汗.png","alu43":"alu/献花.png","alu44":"alu/献黄瓜.png","alu45":"alu/皱眉.png","alu46":"alu/看不见.png","alu47":"alu/看热闹.png","alu48":"alu/瞅你.png","alu49":"alu/肿包.png","alu50":"alu/脸红.png","alu51":"alu/蜡烛.png","alu52":"alu/装大款.png","alu53":"alu/观察.png","alu54":"alu/赞一个.png","alu55":"alu/邪恶.png","alu56":"alu/锁眉.png","alu57":"alu/长草.png","alu58":"alu/阴暗.png","alu59":"alu/高兴.png","alu60":"alu/黑线.png","alu61":"alu/鼓掌.png","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg"},"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      <font color=#BC9AFC>赣ICP备2024022367号-1</font>
+    </a>
+  </span>
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>
